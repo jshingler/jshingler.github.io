@@ -1,67 +1,76 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on My New Hugo Site</title>
-    <link>http://example.org/tags/</link>
-    <description>Recent content in Tags on My New Hugo Site</description>
+    <title>Tags on JShingler Blog</title>
+    <link>https://jshingler.github.io/tags/</link>
+    <description>Recent content in Tags on JShingler Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 10 Oct 2015 13:07:31 +0200</lastBuildDate>
+    <lastBuildDate>Sat, 07 Dec 2019 13:46:46 -0500</lastBuildDate>
     
-	<atom:link href="http://example.org/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://jshingler.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>ipsum</title>
-      <link>http://example.org/tags/ipsum/</link>
-      <pubDate>Sat, 10 Oct 2015 13:07:31 +0200</pubDate>
+      <title>asciidoc</title>
+      <link>https://jshingler.github.io/tags/asciidoc/</link>
+      <pubDate>Sat, 07 Dec 2019 13:46:46 -0500</pubDate>
       
-      <guid>http://example.org/tags/ipsum/</guid>
+      <guid>https://jshingler.github.io/tags/asciidoc/</guid>
       <description></description>
     </item>
     
     <item>
       <title>golang</title>
-      <link>http://example.org/tags/golang/</link>
-      <pubDate>Fri, 02 Oct 2015 21:49:20 +0200</pubDate>
+      <link>https://jshingler.github.io/tags/golang/</link>
+      <pubDate>Sat, 07 Dec 2019 13:46:46 -0500</pubDate>
       
-      <guid>http://example.org/tags/golang/</guid>
+      <guid>https://jshingler.github.io/tags/golang/</guid>
       <description></description>
     </item>
     
     <item>
       <title>hugo</title>
-      <link>http://example.org/tags/hugo/</link>
-      <pubDate>Fri, 02 Oct 2015 21:49:20 +0200</pubDate>
+      <link>https://jshingler.github.io/tags/hugo/</link>
+      <pubDate>Sat, 07 Dec 2019 13:46:46 -0500</pubDate>
       
-      <guid>http://example.org/tags/hugo/</guid>
+      <guid>https://jshingler.github.io/tags/hugo/</guid>
       <description></description>
     </item>
     
     <item>
       <title>programming</title>
-      <link>http://example.org/tags/programming/</link>
-      <pubDate>Fri, 02 Oct 2015 21:49:20 +0200</pubDate>
+      <link>https://jshingler.github.io/tags/programming/</link>
+      <pubDate>Sat, 07 Dec 2019 13:46:46 -0500</pubDate>
       
-      <guid>http://example.org/tags/programming/</guid>
+      <guid>https://jshingler.github.io/tags/programming/</guid>
       <description></description>
     </item>
     
     <item>
       <title>theme</title>
-      <link>http://example.org/tags/theme/</link>
-      <pubDate>Fri, 02 Oct 2015 21:49:20 +0200</pubDate>
+      <link>https://jshingler.github.io/tags/theme/</link>
+      <pubDate>Sat, 07 Dec 2019 13:46:46 -0500</pubDate>
       
-      <guid>http://example.org/tags/theme/</guid>
+      <guid>https://jshingler.github.io/tags/theme/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ipsum</title>
+      <link>https://jshingler.github.io/tags/ipsum/</link>
+      <pubDate>Sat, 10 Oct 2015 13:07:31 +0200</pubDate>
+      
+      <guid>https://jshingler.github.io/tags/ipsum/</guid>
       <description></description>
     </item>
     
     <item>
       <title>go</title>
-      <link>http://example.org/tags/go/</link>
+      <link>https://jshingler.github.io/tags/go/</link>
       <pubDate>Thu, 17 Sep 2015 13:47:08 +0200</pubDate>
       
-      <guid>http://example.org/tags/go/</guid>
+      <guid>https://jshingler.github.io/tags/go/</guid>
       <description></description>
     </item>
     
