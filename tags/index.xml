@@ -6,7 +6,7 @@
     <description>Recent content in Tags on JShingler Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 07 Dec 2019 13:46:46 -0500</lastBuildDate>
+    <lastBuildDate>Sat, 07 Dec 2019 15:55:02 -0500</lastBuildDate>
     
 	<atom:link href="https://jshingler.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,9 +14,45 @@
     <item>
       <title>asciidoc</title>
       <link>https://jshingler.github.io/tags/asciidoc/</link>
-      <pubDate>Sat, 07 Dec 2019 13:46:46 -0500</pubDate>
+      <pubDate>Sat, 07 Dec 2019 15:55:02 -0500</pubDate>
       
       <guid>https://jshingler.github.io/tags/asciidoc/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>hugo</title>
+      <link>https://jshingler.github.io/tags/hugo/</link>
+      <pubDate>Sat, 07 Dec 2019 15:55:02 -0500</pubDate>
+      
+      <guid>https://jshingler.github.io/tags/hugo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>programming</title>
+      <link>https://jshingler.github.io/tags/programming/</link>
+      <pubDate>Sat, 07 Dec 2019 15:55:02 -0500</pubDate>
+      
+      <guid>https://jshingler.github.io/tags/programming/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ThankYou</title>
+      <link>https://jshingler.github.io/tags/thankyou/</link>
+      <pubDate>Sat, 07 Dec 2019 15:55:02 -0500</pubDate>
+      
+      <guid>https://jshingler.github.io/tags/thankyou/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>theme</title>
+      <link>https://jshingler.github.io/tags/theme/</link>
+      <pubDate>Sat, 07 Dec 2019 15:55:02 -0500</pubDate>
+      
+      <guid>https://jshingler.github.io/tags/theme/</guid>
       <description></description>
     </item>
     
@@ -26,33 +62,6 @@
       <pubDate>Sat, 07 Dec 2019 13:46:46 -0500</pubDate>
       
       <guid>https://jshingler.github.io/tags/golang/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>hugo</title>
-      <link>https://jshingler.github.io/tags/hugo/</link>
-      <pubDate>Sat, 07 Dec 2019 13:46:46 -0500</pubDate>
-      
-      <guid>https://jshingler.github.io/tags/hugo/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>programming</title>
-      <link>https://jshingler.github.io/tags/programming/</link>
-      <pubDate>Sat, 07 Dec 2019 13:46:46 -0500</pubDate>
-      
-      <guid>https://jshingler.github.io/tags/programming/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>theme</title>
-      <link>https://jshingler.github.io/tags/theme/</link>
-      <pubDate>Sat, 07 Dec 2019 13:46:46 -0500</pubDate>
-      
-      <guid>https://jshingler.github.io/tags/theme/</guid>
       <description></description>
     </item>
     
