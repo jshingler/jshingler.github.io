@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>devOps on Jim Shingler Blog</title>
+    <link>https://jshingler.github.io/tags/devops/</link>
+    <description>Recent content in devOps on Jim Shingler Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 15 Sep 2018 17:20:49 -0500</lastBuildDate>
+    
+	<atom:link href="https://jshingler.github.io/tags/devops/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Devops Resources</title>
+      <link>https://jshingler.github.io/blog/2018/09/15/devops-resources/</link>
+      <pubDate>Sat, 15 Sep 2018 17:20:49 -0500</pubDate>
+      
+      <guid>https://jshingler.github.io/blog/2018/09/15/devops-resources/</guid>
+      <description>I am frequently asked for resources to help people learn about devOps. This is a collection of resources that have influenced my journey and thinking about DevOps.
+   Books The Goal - Awesome on Audible
+ Theory of Constraints Website
+    The Phoenix Project
+    Beyond the The Phoenix Project
+    The DevOps HandBook
+ The DevOps Handbook - Website</description>
+    </item>
+    
+  </channel>
+</rss>
