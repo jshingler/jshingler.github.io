@@ -58,12 +58,12 @@
   </url>
   
   <url>
-    <loc>https://jshingler.github.io/tags/programming/</loc>
+    <loc>https://jshingler.github.io/categories/programming/</loc>
     <lastmod>2019-12-07T13:46:46-05:00</lastmod>
   </url>
   
   <url>
-    <loc>https://jshingler.github.io/categories/programming/</loc>
+    <loc>https://jshingler.github.io/tags/programming/</loc>
     <lastmod>2019-12-07T13:46:46-05:00</lastmod>
   </url>
   
@@ -120,6 +120,11 @@
   <url>
     <loc>https://jshingler.github.io/categories/starting/</loc>
     <lastmod>2015-06-24T13:50:46+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jshingler.github.io/google29bb5b3d769d94a9/</loc>
+    <priority>0</priority>
   </url>
   
   <url>
