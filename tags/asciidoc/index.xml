@@ -25,8 +25,7 @@
   Hugo
   Asciidoctor
    Mention Drew Heintz callout on Hugo
-     There are things to note!
-     jim.groovy package com.mrhaki import static ratpack.groovy.Groovy.ratpack ratpack { handlers { get { render &#34;</description>
+ Content: * Enable Google Maps * Enable Google Analytics * Submit for Google Indexing - put file in static * Enable Disqus * Enable ContactMe Formspree</description>
     </item>
     
   </channel>
