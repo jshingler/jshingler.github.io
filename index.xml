@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>JShingler Blog</title>
+    <title>Jim Shingler Blog</title>
     <link>https://jshingler.github.io/</link>
-    <description>Recent content on JShingler Blog</description>
+    <description>Recent content on Jim Shingler Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 07 Dec 2019 15:55:02 -0500</lastBuildDate>
