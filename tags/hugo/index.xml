@@ -17,15 +17,8 @@
       <pubDate>Sat, 07 Dec 2019 13:46:46 -0500</pubDate>
       
       <guid>https://jshingler.github.io/blog/2019/12/07/creating-this-site/</guid>
-      <description>This will become the first blog on this new site.
- Goals:
-   use Asciidoc
-  host at: jshingler.github.io
-  make publishing as easy as possbile and looking great
-  Hugo
-  Asciidoctor
-   Mention Drew Heintz callout on Hugo
- Content: * Enable Google Maps * Enable Google Analytics * Submit for Google Indexing - put file in static * Enable Disqus * Enable ContactMe Formspree</description>
+      <description>While I am not new to blogging, I was re-inspired by Sasi Peri, a coworker, and her new blog. This gave me the itch to share my experiences and information with hope of helping others.
+ Now that I was re-inspired to blog, I had a fortunate conversation with Drew Heintz. Drew is a bright young man finishing up his Computer Science and Security degrees from RIT. Drew, shared with me that he did his resume using Hugo.</description>
     </item>
     
     <item>
