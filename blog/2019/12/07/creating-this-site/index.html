@@ -233,6 +233,9 @@
 
                         <div id="post-content">
                           <div class="paragraph">
+<p>STATUS: Work in process, I will continue to flush this out.</p>
+</div>
+<div class="paragraph">
 <p>While I am not new to blogging, I was re-inspired by <a href="https://www.linkedin.com/in/sasiperi/">Sasi Peri</a>, a coworker, and her new <a href="https://sasiperi.github.io/">blog</a>.  This gave me the itch to share my experiences and information with hope of helping others.</p>
 </div>
 <div class="paragraph">
@@ -241,17 +244,11 @@
 <div class="paragraph">
 <p>After a little searching, I ran across <a href="https://www.youtube.com/playlist?list=PLLAZ4kZ9dFpOnyRlyS-liKL5ReHDcj4G3">Giraffe Academy Youtub Hugo Tutorial</a>. In addition, I found that Hugo and <a href="https://asciidoctor.org/">AsciiDoctor</a>, one of favorite tools, could be used together, <a href="https://rgielen.net/posts/2019/creating-a-blog-with-hugo-and-asciidoctor/">"Creating a Blog with Hugo and AsciiDoctor"</a>.</p>
 </div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-Start with <a href="https://www.youtube.com/playlist?list=PLLAZ4kZ9dFpOnyRlyS-liKL5ReHDcj4G3">Giraffe Academy Youtub Hugo Tutorial</a>.
-</td>
-</tr>
-</table>
+<div class="imageblock">
+<div class="content">
+<img src="../../../../../img/blog/creating-this-site/VSCodeAsciidoc.png" alt="VS Code Asciidoc">
+</div>
+<div class="title">Figure 1. AsciiDoc in VS Code</div>
 </div>
 <div class="paragraph">
 <p>Properly motivated and educated, I set the following goals:</p>
@@ -288,10 +285,211 @@ Start with <a href="https://www.youtube.com/playlist?list=PLLAZ4kZ9dFpOnyRlyS-li
 <div class="paragraph">
 <p>From there it was time to give it a shot.</p>
 </div>
-<hr>
-<div class="paragraph">
-<p>MORE TO COME!!!</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Start with <a href="https://www.youtube.com/playlist?list=PLLAZ4kZ9dFpOnyRlyS-liKL5ReHDcj4G3">Giraffe Academy Youtub Hugo Tutorial</a> and <a href="https://charly3pins.github.io/post/building-static-blog-with-hugo/">Building a Static Blog with Hugo</a>
+</td>
+</tr>
+</table>
 </div>
+<hr>
+<div class="sect1">
+<h2 id="_install_tools">Install Tools</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>I&#8217;ll assume you already know <a href="https://git-scm.com/">Git</a> and have a <a href="http://github.com">Github</a> account.</p>
+</div>
+<div class="sect2">
+<h3 id="_install_go">Install Go</h3>
+<div class="paragraph">
+<p>Hugo uses <a href="http://golang.org">go</a>. <a href="https://golang.org/dl/">Installation Instructions</a></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_install_asciidoctor">Install AsciiDoctor</h3>
+<div class="paragraph">
+<p>AsciiDoctor has a good installation <a href="https://asciidoctor.org/docs/install-toolchain/">instructions</a></p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+AsciiDoctor requires ruby
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_install_hugo">Install Hugo</h3>
+<div class="paragraph">
+<p>I am a Mac guy, so I installed Hugo from the <a href="https://gohugo.io/getting-started/installing/#install-hugo-from-tarball">tarball</a>.</p>
+</div>
+<hr>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_getting_started">Getting Started</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Loads of Credit to <a href="https://charly3pins.github.io">Charly3pins</a> and his posting  <a href="https://charly3pins.github.io/post/building-static-blog-with-hugo/">Building a Static Blog with Hugo</a></p>
+</div>
+<div class="sect2">
+<h3 id="_create_empty_site">Create Empty Site</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="prettyprint highlight linenums"><code class="language-source" data-lang="source">hugo new site jshingler</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>results in:</p>
+</div>
+<div class="admonitionblock caution">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-caution" title="Caution"></i>
+</td>
+<td class="content">
+Insert Pic of Fresh Site
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_setup_a_theme">Setup a Theme</h3>
+<div class="listingblock">
+<div class="title">Because we are good devs, initialize git</div>
+<div class="content">
+<pre class="prettyprint highlight linenums"><code class="language-source" data-lang="source">cd jshingler
+git init</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>I chose the <a href="https://themes.gohugo.io/hugo-universal-theme/">Universal Theme</a> from the <a href="https://themes.gohugo.io/">Hugo Themes</a> you choose what you like best.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="prettyprint highlight linenums"><code class="language-source" data-lang="source">git clone https://github.com/devcows/hugo-universal-theme.git themes/hugo-universal-theme</code></pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+If you haven&#8217;t already done it, &#8230;&#8203; Do yourself a favor, watch the <a href="https://www.youtube.com/playlist?list=PLLAZ4kZ9dFpOnyRlyS-liKL5ReHDcj4G3">Giraffe Academy Youtub Hugo Tutorial</a>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Explore the theme, &#8230;&#8203; A really good place to look is the example site.  You can find it at: <code><code>themes/hugo-universal-them/exampleSite</code></code></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_tune_the_theme">Tune the Theme</h3>
+<div class="paragraph">
+<p>The universal theme is pretty robust, &#8230;&#8203; It has a lot of features that I really don&#8217;t need for a Minimum Viable Product.  The <code><code>config.toml</code></code> file is used to configure the features.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_local_development">Local Development</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="prettyprint highlight linenums"><code class="language-source" data-lang="source">hugo server -D</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Dash D, <code><code>-D</code></code>, allows draft content to be servered,  Not check it out <a href="http://localhost:1313" class="bare">http://localhost:1313</a></p>
+</div>
+<div class="sect3">
+<h4 id="_add_content">Add Content</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="prettyprint highlight linenums"><code class="language-source" data-lang="source">hugo new blog/creating-this-site.adoc</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_publish_to_github">Publish to Github</h3>
+<div class="admonitionblock caution">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-caution" title="Caution"></i>
+</td>
+<td class="content">
+Add Info on publishing to github.io
+</td>
+</tr>
+</table>
+</div>
+<div class="listingblock">
+<div class="title">deploy.sh - slightly modified from Charly3Pins</div>
+<div class="content">
+<pre class="prettyprint highlight linenums"><code class="language-source" data-lang="source">#!/bin/bash
+set -x
+
+echo -e "\033[0;32mDeploying updates to GitHub...\033[0m"
+
+# Remove old Stuff  <i class="conum" data-value="1"></i><b>(1)</b>
+cd public
+rm -fr *
+cd ..
+
+# Build the project.
+hugo # if using a theme, replace with `hugo -t &lt;YOURTHEME&gt;`
+
+# Go To Public folder
+cd public
+
+# Add changes to git.
+git add .
+
+# Commit changes.
+msg="rebuilding site `date`"
+if [ $# -eq 1 ]
+  then msg="$1"
+fi
+git commit -m "$msg"
+
+# Push source and build repos.
+git push origin master
+
+# Come Back up to the Project Root
+cd ..</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>If you delete something from the site, if you really want it to be delete, you need to clean out the <code><code>public</code></code> directory.</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_more_to_come">MORE TO COME!!!</h2>
+<div class="sectionbody">
+<hr>
 <div class="paragraph">
 <p>Content:</p>
 </div>
@@ -314,24 +512,14 @@ Start with <a href="https://www.youtube.com/playlist?list=PLLAZ4kZ9dFpOnyRlyS-li
 </li>
 </ul>
 </div>
+</div>
+</div>
 <div class="sect1">
-<h2 id="_simple_test_formating_java_code_with_cueballs">Simple Test Formating Java Code with CueBalls</h2>
+<h2 id="_whats_next">What&#8217;s Next</h2>
 <div class="sectionbody">
-<div class="listingblock">
-<div class="title">Simple Java application</div>
-<div class="content">
-<pre class="prettyprint highlight linenums"><code class="language-source" data-lang="source">public static void main( String args[] ) {
-    System.out.println("Foobar!");  <i class="conum" data-value="1"></i><b>(1)</b>
-}</code></pre>
-</div>
-</div>
-<div class="colist arabic">
-<table>
-<tr>
-<td><i class="conum" data-value="1"></i><b>1</b></td>
-<td>Print something</td>
-</tr>
-</table>
+<div class="paragraph">
+<p>René at his <a href="https://rgielen.net/about/">blog</a> has a pretty good article about
+<a href="https://rgielen.net/posts/2019/creating-a-dockerized-hugo-asciidoctor-toolchain/">Creating a Dockerized Hugo + AsciiDoctor Toolchain</a>.  Next, I am thinking about using this with <a href="https://help.github.com/en/actions">GitHub worksflows and actions</a> to that when I push a change to the master branch of my repository, the website is automatically rebuilt and published.</p>
 </div>
 <hr>
 <div class="paragraph">
