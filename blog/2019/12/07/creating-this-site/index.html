@@ -355,7 +355,7 @@ AsciiDoctor requires ruby
 <h3 id="_create_empty_site">Create Empty Site</h3>
 <div class="listingblock">
 <div class="content">
-<pre class="prettyprint highlight linenums"><code class="language-source" data-lang="source">hugo new site jshingler
+<pre class="prettyprint highlight linenums"><code data-lang="source">hugo new site jshingler
 
 Congratulations! Your new Hugo site is created in /Users/jshingler/temp/hugo/jshingler.
 
@@ -385,7 +385,7 @@ Visit https://gohugo.io/ for quickstart guide and full documentation.</code></pr
 <div class="listingblock">
 <div class="title">Because we are good devs, initialize git</div>
 <div class="content">
-<pre class="prettyprint highlight linenums"><code class="language-source" data-lang="source">cd jshingler
+<pre class="prettyprint highlight linenums"><code data-lang="source">cd jshingler
 git init</code></pre>
 </div>
 </div>
@@ -394,7 +394,7 @@ git init</code></pre>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="prettyprint highlight linenums"><code class="language-source" data-lang="source">git clone https://github.com/devcows/hugo-universal-theme.git themes/hugo-universal-theme</code></pre>
+<pre class="prettyprint highlight linenums"><code data-lang="source">git clone https://github.com/devcows/hugo-universal-theme.git themes/hugo-universal-theme</code></pre>
 </div>
 </div>
 <div class="admonitionblock warning">
@@ -447,17 +447,17 @@ If you haven&#8217;t already done it, &#8230;&#8203; Do yourself a favor, watch 
 <h3 id="_local_development">Local Development</h3>
 <div class="listingblock">
 <div class="content">
-<pre class="prettyprint highlight linenums"><code class="language-source" data-lang="source">hugo server -D</code></pre>
+<pre class="prettyprint highlight linenums"><code data-lang="source">hugo server -D</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>Dash D, <code><code>-D</code></code>, allows draft content to be servered,  Not check it out <a href="http://localhost:1313" class="bare">http://localhost:1313</a></p>
+<p>Dash D, <code><code>-D</code></code>, allows draft content to be servered,  Now, check it out <a href="http://localhost:1313" class="bare">http://localhost:1313</a></p>
 </div>
 <div class="sect3">
 <h4 id="_add_content">Add Content</h4>
 <div class="listingblock">
 <div class="content">
-<pre class="prettyprint highlight linenums"><code class="language-source" data-lang="source">hugo new blog/creating-this-site.adoc</code></pre>
+<pre class="prettyprint highlight linenums"><code data-lang="source">hugo new blog/creating-this-site.adoc</code></pre>
 </div>
 </div>
 </div>
@@ -494,7 +494,7 @@ Github pages have <a href="https://help.github.com/en/github/working-with-github
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="prettyprint highlight linenums"><code class="language-source" data-lang="source">git submodule add -b master https://github.com/jshingler/jshingler.github.io.git public</code></pre>
+<pre class="prettyprint highlight linenums"><code data-lang="source">git submodule add -b master https://github.com/jshingler/jshingler.github.io.git public</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -503,7 +503,7 @@ Github pages have <a href="https://help.github.com/en/github/working-with-github
 <div class="listingblock">
 <div class="title">deploy.sh - slightly modified from Charly3Pins</div>
 <div class="content">
-<pre class="prettyprint highlight linenums"><code class="language-source" data-lang="source">#!/bin/bash
+<pre class="prettyprint highlight linenums"><code data-lang="source">#!/bin/bash
 set -x
 
 echo -e "\033[0;32mDeploying updates to GitHub...\033[0m"
@@ -645,8 +645,10 @@ cd ..</code></pre>
 <div class="paragraph">
 <p>Test Includes</p>
 </div>
-<div class="paragraph">
-<p><a href="https://raw.githubusercontent.com/jshingler/jshingler-blog/master/config.toml" class="bare">https://raw.githubusercontent.com/jshingler/jshingler-blog/master/config.toml</a></p>
+<div class="listingblock">
+<div class="content">
+<pre class="prettyprint highlight linenums"><code data-lang="source"></code></pre>
+</div>
 </div>
 </div>
 </div>
