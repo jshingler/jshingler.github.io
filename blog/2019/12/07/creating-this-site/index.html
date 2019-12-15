@@ -22,7 +22,9 @@
 
   
 
+
 <link rel="stylesheet" href="https://jshingler.github.io/css/custom.css">
+
 
 
   
@@ -232,13 +234,7 @@
                         <p class="text-muted text-uppercase mb-small text-right">By <a href="#">Jim Shingler</a> | December 7, 2019</p>
 
                         <div id="post-content">
-                          <div class="sect1">
-<h2 id="_status_work_in_process"><strong>STATUS:</strong> Work in process</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>I will continue to flush this out.</p>
-</div>
-<div class="paragraph">
+                          <div class="paragraph">
 <p>While I am not new to blogging, I was re-inspired by <a href="https://www.linkedin.com/in/sasiperi/">Sasi Peri</a>, a coworker, and her new <a href="https://sasiperi.github.io/">blog</a>.  This gave me the itch to share my experiences and information with hope of helping others.</p>
 </div>
 <div class="paragraph">
@@ -304,8 +300,6 @@ Start with <a href="https://www.youtube.com/playlist?list=PLLAZ4kZ9dFpOnyRlyS-li
 </table>
 </div>
 <hr>
-</div>
-</div>
 <div class="sect1">
 <h2 id="_install_tools">Install Tools</h2>
 <div class="sectionbody">
@@ -460,182 +454,160 @@ If you haven&#8217;t already done it, &#8230;&#8203; Do yourself a favor, watch 
 <pre class="prettyprint highlight linenums"><code data-lang="source">hugo new blog/creating-this-site.adoc</code></pre>
 </div>
 </div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_publish_to_github">Publish to Github</h3>
 <div class="paragraph">
-<p>Some really good instructions from the Hugo docs on <a href="https://gohugo.io/hosting-and-deployment/hosting-on-github/#types-of-github-pages">Publishing to Github.io</a> and more information on the <a href="https://help.github.com/en/github/working-with-github-pages/about-github-pages#user&#8212;&#8203;organization-pages">github help pages</a></p>
-</div>
-<div class="admonitionblock warning">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-warning" title="Warning"></i>
-</td>
-<td class="content">
-Github pages have <a href="https://help.github.com/en/github/working-with-github-pages/about-github-pages#usage-limits">usage limits</a>, I might have to figure out a different hosting option.
-</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<p>I choose to use a user page <a href="https://jshingler.github.io" class="bare">https://jshingler.github.io</a>. Make sure you have created <code><code>&lt;USERNAME&gt;.github.io</code></code> (E.g. <a href="https://github.com/jshingler/jshingler.github.io" class="bare">https://github.com/jshingler/jshingler.github.io</a>) repository on the github website. This is where the static content will be published to and served from.  While it might be tempting, <strong>NEVER DIRECTLY MODIFY THE STATIC SITE</strong>, always republish from the your hugo blog repository.</p>
-</div>
-<div class="quoteblock">
-<blockquote>
-<div class="paragraph">
-<p>Finally you need to add the &lt;USERNAME&gt;.github.io repo inside the public folder as a git submodule in order to update your website once you regenerate the site.</p>
-</div>
-</blockquote>
-<div class="attribution">
-&#8212; Charly3pins
-</div>
+<p>results in:</p>
 </div>
 <div class="listingblock">
+<div class="title">Default front matters</div>
 <div class="content">
-<pre class="prettyprint highlight linenums"><code data-lang="source">git submodule add -b master https://github.com/jshingler/jshingler.github.io.git public</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Now publish the website.  Here is a slightly modified script from Charly3Pin&#8217;s blog to publish the site.</p>
-</div>
-<div class="listingblock">
-<div class="title">deploy.sh - slightly modified from Charly3Pins</div>
-<div class="content">
-<pre class="prettyprint highlight linenums"><code data-lang="source">#!/bin/bash
-set -x
-
-echo -e "\033[0;32mDeploying updates to GitHub...\033[0m"
-
-# Remove old Stuff  <i class="conum" data-value="1"></i><b>(1)</b>
-cd public
-rm -fr *
-cd ..
-
-# Build the project.
-hugo # if using a theme, replace with `hugo -t &lt;YOURTHEME&gt;`
-
-# Go To Public folder
-cd public
-
-# Add changes to git.
-git add .
-
-# Commit changes.
-msg="rebuilding site `date`"
-if [ $# -eq 1 ]
-  then msg="$1"
-fi
-git commit -m "$msg"
-
-# Push source and build repos.
-git push origin master
-
-# Come Back up to the Project Root
-cd ..</code></pre>
+<pre class="prettyprint highlight"><code data-lang="asciidoc">---
+title: "Create This Site"
+date: 2019-12-15T17:12:43-05:00 <i class="conum" data-value="1"></i><b>(1)</b>
+draft: true <i class="conum" data-value="2"></i><b>(2)</b>
+---</code></pre>
 </div>
 </div>
 <div class="colist arabic">
 <table>
 <tr>
 <td><i class="conum" data-value="1"></i><b>1</b></td>
-<td>If you delete something from the site, if you really want it to be delete, you need to clean out the <code><code>public</code></code> directory.</td>
+<td>date the document was created</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>it starts as a draft.</td>
 </tr>
 </table>
 </div>
-<hr>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_more_to_come">MORE TO COME!!!</h2>
-<div class="sectionbody">
-<div class="ulist">
-<ul>
-<li>
-<p>Code Formating (Google Code Prettify)</p>
-</li>
-<li>
-<p>Custom CSS to fix AsciiDoc</p>
-</li>
-</ul>
-</div>
-<hr>
 <div class="paragraph">
-<p>Content:</p>
+<p>The theme supports additional attributes.</p>
 </div>
-<div class="ulist">
-<ul>
-<li>
-<p>Enable Google Maps</p>
-</li>
-<li>
-<p>Enable Google Analytics</p>
-</li>
-<li>
-<p>Submit for Google Indexing - put file in static</p>
-</li>
-<li>
-<p>Enable Disqus</p>
-</li>
-<li>
-<p>Enable ContactMe Formspree</p>
-</li>
-</ul>
+<div class="listingblock">
+<div class="title">Flushed out front matters for this theme.</div>
+<div class="content">
+<pre class="prettyprint highlight"><code data-lang="asciidoc">---
+title: "Creating This Site"
+date: 2019-12-07T13:46:46-05:00
+draft: false <i class="conum" data-value="1"></i><b>(1)</b>
+tags: ["golang", "programming", "theme", "hugo", "asciidoc"] <i class="conum" data-value="2"></i><b>(2)</b>
+categories: ["programming"] <i class="conum" data-value="3"></i><b>(3)</b>
+banner: "img/banners/banner-1.jpg" <i class="conum" data-value="4"></i><b>(4)</b>
+author: "Jim Shingler" <i class="conum" data-value="5"></i><b>(5)</b>
+description: "This tutorial will show you how I created this site. It will use Hugo, Asciidoc via AsciiDoctor, and Github" <i class="conum" data-value="6"></i><b>(6)</b>
+---</code></pre>
 </div>
 </div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>No Longer a draft</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>Tag the blog post with these tags</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>Put it in the programming category</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="4"></i><b>4</b></td>
+<td>Use this image on front page</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="5"></i><b>5</b></td>
+<td>I authored it</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="6"></i><b>6</b></td>
+<td>a little description</td>
+</tr>
+</table>
 </div>
-<div class="sect1">
-<h2 id="_whats_next">What&#8217;s Next</h2>
-<div class="sectionbody">
 <div class="paragraph">
-<p>René at his <a href="https://rgielen.net/about/">blog</a> has a pretty good article about
-<a href="https://rgielen.net/posts/2019/creating-a-dockerized-hugo-asciidoctor-toolchain/">Creating a Dockerized Hugo + AsciiDoctor Toolchain</a>.  Next, I am thinking about using this with <a href="https://help.github.com/en/actions">GitHub worksflows and actions</a> to that when I push a change to the master branch of my repository, the website is automatically rebuilt and published.</p>
+<p>Now you start writing your asciidoc as usual.</p>
 </div>
-<hr>
+<div class="listingblock">
+<div class="content">
+<pre class="prettyprint highlight"><code data-lang="asciidoc">:source-highlighter: prettify   <i class="conum" data-value="1"></i><b>(1)</b>
+:icons: font                    <i class="conum" data-value="2"></i><b>(2)</b>
+:imagesdir-old: {imagesdir}     <i class="conum" data-value="3"></i><b>(3)</b>
+:imagesdir: ../../../../../img/blog/creating-this-site <i class="conum" data-value="4"></i><b>(4)</b>
+
+## *STATUS:* Work in process
+I will continue to flush this out.
+
+While I am not new to blogging, I was re-inspired by https://www.linkedin.com/in/sasiperi/[Sasi Peri], a coworker, and her new https://sasiperi.github.io/[blog].  This gave me the itch to share my experiences and information with hope of helping others.</code></pre>
 </div>
 </div>
-<div class="sect1">
-<h2 id="_resources_credits">Resources / Credits:</h2>
-<div class="sectionbody">
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>use google code prettify to format code, more instructions to follow</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>icons for Admonitions (NOTE, TIP, IMPORTANT, CAUTION, WARNING)</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>save the current image directory, might need it later</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="4"></i><b>4</b></td>
+<td>where to find images for this post</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_tuning_css">Tuning CSS</h4>
+<div class="paragraph">
+<p>When you first combine the universal themes and asciidoc the results might be a little ugly.  To overcome it, you need to tweek the CSS.  To do this, you will need to copy the <code><code>themes/hugo-universal-theme/layouts/partials/head.html</code></code> to <code><code>layouts/partials/head.html</code></code>.</p>
+</div>
+<div class="listingblock">
+<div class="title">Add this snippet to the head.html file</div>
+<div class="content">
+<pre class="prettyprint highlight"><code data-lang="linenums">{{ range .Site.Params.custom_css -}}
+    &lt;link rel="stylesheet" href="{{ . | absURL }}"&gt;
+{{- end }}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This code will iterate through an array of css files defined in the <code><code>config.toml</code></code> file</p>
+</div>
+<div class="listingblock">
+<div class="title">Define an array of custom css</div>
+<div class="content">
+<pre class="prettyprint highlight"><code>[params]
+    # Custom CSS
+    custom_css = ["css/custom.css"]</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Next, I copied the default Asciidocter style sheet and saved it as <code><code>static/css/custom.css</code></code>.  This file is way to big to include, you can find my tweeked version <a href="https://github.com/jshingler/jshingler-blog/blob/master/static/css/custom.css">here</a>.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_code_formatting">Code Formatting</h4>
+<div class="paragraph">
+<p>Okay, truth be told, getting code formatting working was a little harder than expected.  There are a variety of reasons but here is how I got it working.</p>
+</div>
+<div class="paragraph">
+<p>I looked at a variety of formatters.</p>
+</div>
 <div class="ulist">
 <ul>
 <li>
-<p><a href="https://gohugo.io">Hugo</a></p>
+<p>coderay</p>
 </li>
 <li>
-<p><a href="https://github.com/gohugoio/hugo/releases">Hugo Release</a> Get Hugo Here</p>
+<p>prisim</p>
 </li>
 <li>
-<p><a href="https://asciidoctor.org/">Asciidoctor</a></p>
-</li>
-<li>
-<p><a href="http://asciidoc.org/">Asciidoc</a></p>
-</li>
-<li>
-<p><a href="https://code.visualstudio.com/">VS Code</a></p>
-</li>
-<li>
-<p><a href="https://www.youtube.com/playlist?list=PLLAZ4kZ9dFpOnyRlyS-liKL5ReHDcj4G3">Giraffe Academy Hugo Tutorial</a></p>
-</li>
-<li>
-<p><a href="https://charly3pins.github.io/post/building-static-blog-with-hugo/">Building Static Blog with Hugo</a></p>
-</li>
-<li>
-<p><a href="https://rgielen.net/posts/2019/creating-a-blog-with-hugo-and-asciidoctor/">Creating a Blog with Hugo and AsciiDoctor</a>, contains code formatting information.</p>
-</li>
-<li>
-<p><a href="https://discourse.gohugo.io/t/how-to-override-css-classes-with-hugo/3033">How to override CSS classes with Hugo</a></p>
-</li>
-<li>
-<p><a href="https://rgielen.net/posts/2019/creating-a-dockerized-hugo-asciidoctor-toolchain/">Creating a Dockerized Hugo + AsciiDoctor Toolchain:</a></p>
-</li>
-<li>
-<p><a href="https://opensource.com/article/17/8/asciidoc-web-development">How to create a blog with AsciiDoc</a></p>
-</li>
-<li>
-<p><a href="https://www.bryanklein.com/blog/hugo-asciidoctor-vscode-gitlab-firebase/" class="bare">https://www.bryanklein.com/blog/hugo-asciidoctor-vscode-gitlab-firebase/</a></p>
+<p>highlights.js</p>
 </li>
 <li>
 <p><a href="https://github.com/google/code-prettify">Google Code Prettify</a></p>
@@ -643,15 +615,57 @@ cd ..</code></pre>
 </ul>
 </div>
 <div class="paragraph">
-<p>Test Includes</p>
+<p>I decided to use <a href="https://raw.githack.com/google/code-prettify/master/styles/index.html">Google Code Prettify - Sons of Obsidian</a> style.</p>
+</div>
+<div class="paragraph">
+<p>The previous section showed the how to declare the syntax highlighter to use.  There is one additionl step.  The corresponding javascipt file need to be imported.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Copy <code><code>themes/hugo-universal-theme/layouts/partials/scripts.html</code></code> to <code><code>layouts/partials/scripts.html</code></code></p>
+</li>
+<li>
+<p>Add the javascript declaration to the file</p>
+</li>
+</ol>
 </div>
 <div class="listingblock">
+<div class="content">
+<pre class="prettyprint highlight"><code data-lang="html">&lt;script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js?skin=sons-of-obsidian"&gt;&lt;/script&gt;</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_includes">Includes</h4>
+<div class="paragraph">
+<p>By default, asciidoctor will turn included external urls into links instead of including them.  This can be overcome on the command line as <code><code>asciidoctor -a allow-uri-read myfile.adoc</code></code>.  But we aren&#8217;t using asciidoctor directly, hugo is calling it an we have no way to set the flag.  There is a creative work around, okay hack.  Create an asciidoctor bash script that adds the flag and make sure the asciidoctor bash script is first in your $PATH.</p>
+</div>
+<div class="admonitionblock caution">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-caution" title="Caution"></i>
+</td>
+<td class="content">
+This can cause a security issue.  <strong>You must really trust what you are including.</strong>  My advice is that unless you control the file being included, don&#8217;t include it.
+</td>
+</tr>
+</table>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="prettyprint highlight"><code data-lang="bash">#!/bin/bash
+${HOME}/.rvm/gems/ruby-2.4.0/bin/asciidoctor -a allow-uri-read $*</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Sample including a portion of the <code><code>config.toml</code></code> file</div>
 <div class="content">
 <pre class="prettyprint highlight linenums"><code data-lang="source">[params]
     # Custom CSS
     custom_css = ["css/custom.css"]
-    # custom_css = ["css/molokai.css","css/custom.css"]
-    # custom_css = ["css/prism.css","css/custom.css"]
+
 
     viewMorePostLink = "/blog/"
     author = "Jim Shingler"
@@ -768,6 +782,177 @@ cd ..</code></pre>
     title = "Jim Shingler blog"
     subtitle = "Thoughts on: Technical, Professional, and Personal Development"</code></pre>
 </div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_publish_to_github">Publish to Github</h3>
+<div class="paragraph">
+<p>Some really good instructions from the Hugo docs on <a href="https://gohugo.io/hosting-and-deployment/hosting-on-github/#types-of-github-pages">Publishing to Github.io</a> and more information on the <a href="https://help.github.com/en/github/working-with-github-pages/about-github-pages#user&#8212;&#8203;organization-pages">github help pages</a></p>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+Github pages have <a href="https://help.github.com/en/github/working-with-github-pages/about-github-pages#usage-limits">usage limits</a>, I might have to figure out a different hosting option.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>I choose to use a user page <a href="https://jshingler.github.io" class="bare">https://jshingler.github.io</a>. Make sure you have created <code><code>&lt;USERNAME&gt;.github.io</code></code> (E.g. <a href="https://github.com/jshingler/jshingler.github.io" class="bare">https://github.com/jshingler/jshingler.github.io</a>) repository on the github website. This is where the static content will be published to and served from.  While it might be tempting, <strong>NEVER DIRECTLY MODIFY THE STATIC SITE</strong>, always republish from the your hugo blog repository.</p>
+</div>
+<div class="quoteblock">
+<blockquote>
+<div class="paragraph">
+<p>Finally you need to add the &lt;USERNAME&gt;.github.io repo inside the public folder as a git submodule in order to update your website once you regenerate the site.</p>
+</div>
+</blockquote>
+<div class="attribution">
+&#8212; Charly3pins
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="prettyprint highlight linenums"><code data-lang="source">git submodule add -b master https://github.com/jshingler/jshingler.github.io.git public</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Now publish the website.  Here is a slightly modified script from Charly3Pin&#8217;s blog to publish the site.</p>
+</div>
+<div class="listingblock">
+<div class="title">deploy.sh - slightly modified from Charly3Pins</div>
+<div class="content">
+<pre class="prettyprint highlight linenums"><code data-lang="source">#!/bin/bash
+set -x
+
+echo -e "\033[0;32mDeploying updates to GitHub...\033[0m"
+
+# Remove old Stuff  <i class="conum" data-value="1"></i><b>(1)</b>
+cd public
+rm -fr *
+cd ..
+
+# Build the project.
+hugo # if using a theme, replace with `hugo -t &lt;YOURTHEME&gt;`
+
+# Go To Public folder
+cd public
+
+# Add changes to git.
+git add .
+
+# Commit changes.
+msg="rebuilding site `date`"
+if [ $# -eq 1 ]
+  then msg="$1"
+fi
+git commit -m "$msg"
+
+# Push source and build repos.
+git push origin master
+
+# Come Back up to the Project Root
+cd ..</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>If you delete something from the site, if you really want it to be delete, you need to clean out the <code><code>public</code></code> directory.</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_additional_steps">Additional Steps</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>That is pretty well it.  I now have a functional blog published to github.io.  I won&#8217;t go into the details, here are some additional steps I performed, most of which where in the <code><code>config.toml</code></code> file</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Enable Google Maps</p>
+</li>
+<li>
+<p>Enable Google Analytics</p>
+</li>
+<li>
+<p>Submit for Google Indexing</p>
+</li>
+<li>
+<p>Enable Disqus</p>
+</li>
+<li>
+<p>Enable ContactMe Formspree</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_whats_next">What&#8217;s Next</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>René at his <a href="https://rgielen.net/about/">blog</a> has a pretty good article about
+<a href="https://rgielen.net/posts/2019/creating-a-dockerized-hugo-asciidoctor-toolchain/">Creating a Dockerized Hugo + AsciiDoctor Toolchain</a>.  Next, I am thinking about using this with <a href="https://help.github.com/en/actions">GitHub worksflows and actions</a> to that when I push a change to the master branch of my repository, the website is automatically rebuilt and published.</p>
+</div>
+<hr>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_resources_credits">Resources / Credits:</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://gohugo.io">Hugo</a></p>
+</li>
+<li>
+<p><a href="https://github.com/gohugoio/hugo/releases">Hugo Release</a> Get Hugo Here</p>
+</li>
+<li>
+<p><a href="https://asciidoctor.org/">Asciidoctor</a></p>
+</li>
+<li>
+<p><a href="http://asciidoc.org/">Asciidoc</a></p>
+</li>
+<li>
+<p><a href="https://code.visualstudio.com/">VS Code</a></p>
+</li>
+<li>
+<p><a href="https://www.youtube.com/playlist?list=PLLAZ4kZ9dFpOnyRlyS-liKL5ReHDcj4G3">Giraffe Academy Hugo Tutorial</a></p>
+</li>
+<li>
+<p><a href="https://charly3pins.github.io/post/building-static-blog-with-hugo/">Building Static Blog with Hugo</a></p>
+</li>
+<li>
+<p><a href="https://rgielen.net/posts/2019/creating-a-blog-with-hugo-and-asciidoctor/">Creating a Blog with Hugo and AsciiDoctor</a>, contains code formatting information.</p>
+</li>
+<li>
+<p><a href="https://discourse.gohugo.io/t/how-to-override-css-classes-with-hugo/3033">How to override CSS classes with Hugo</a></p>
+</li>
+<li>
+<p><a href="https://rgielen.net/posts/2019/creating-a-dockerized-hugo-asciidoctor-toolchain/">Creating a Dockerized Hugo + AsciiDoctor Toolchain:</a></p>
+</li>
+<li>
+<p><a href="https://opensource.com/article/17/8/asciidoc-web-development">How to create a blog with AsciiDoc</a></p>
+</li>
+<li>
+<p><a href="https://www.bryanklein.com/blog/hugo-asciidoctor-vscode-gitlab-firebase/" class="bare">https://www.bryanklein.com/blog/hugo-asciidoctor-vscode-gitlab-firebase/</a></p>
+</li>
+<li>
+<p><a href="https://github.com/google/code-prettify">Google Code Prettify</a></p>
+</li>
+</ul>
 </div>
 </div>
 </div>
@@ -1115,12 +1300,8 @@ if (!doNotTrack) {
 <script src="/js/owl.carousel.min.js"></script>
 
 
-
-
 <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js?skin=sons-of-obsidian"></script> 
 
-
- 
 
 
 
