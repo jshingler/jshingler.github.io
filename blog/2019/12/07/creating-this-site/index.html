@@ -16,7 +16,7 @@
   <meta name="keywords" content="jshingler, Jim Shingler, James Shingler, Shingler, Schindler, Lean, Agile, devOps, java, Spring, Cloud Native, Microservices, hugo, go, golang, programming, theme, asciidoc">
   
   
-  <meta name="description" content="This tutorial will show you how to create a simple theme in Hugo. I assume that you are familiar with HTML, the bash command line, and that you are comfortable using Markdown and Asciidoc to format content.">
+  <meta name="description" content="This tutorial will show you how I created this site. It will use Hugo, Asciidoc via AsciiDoctor, and Github">
 
   <meta name="generator" content="Hugo 0.60.1" />
 
@@ -74,7 +74,7 @@
   <meta property="og:title" content="Creating This Site">
   <meta property="og:type" content="article">
   <meta property="og:url" content="https://jshingler.github.io/blog/2019/12/07/creating-this-site/" />
-  <meta property="og:description" content="This tutorial will show you how to create a simple theme in Hugo. I assume that you are familiar with HTML, the bash command line, and that you are comfortable using Markdown and Asciidoc to format content.">
+  <meta property="og:description" content="This tutorial will show you how I created this site. It will use Hugo, Asciidoc via AsciiDoctor, and Github">
   <meta property="og:image" content="https://jshingler.github.io/img/banners/banner-1.jpg">
   <meta property="og:image:type" content="image/jpg">
   
@@ -107,7 +107,7 @@
   
   <meta name="twitter:image" content="https://jshingler.github.io/img/banners/banner-1.jpg">
   
-  <meta name="twitter:description" content="This tutorial will show you how to create a simple theme in Hugo. I assume that you are familiar with HTML, the bash command line, and that you are comfortable using Markdown and Asciidoc to format …">
+  <meta name="twitter:description" content="This tutorial will show you how I created this site. It will use Hugo, Asciidoc via AsciiDoctor, and Github">
   
 
 </head>
@@ -232,8 +232,11 @@
                         <p class="text-muted text-uppercase mb-small text-right">By <a href="#">Jim Shingler</a> | December 7, 2019</p>
 
                         <div id="post-content">
-                          <div class="paragraph">
-<p>STATUS: Work in process, I will continue to flush this out.</p>
+                          <div class="sect1">
+<h2 id="_status_work_in_process"><strong>STATUS:</strong> Work in process</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>I will continue to flush this out.</p>
 </div>
 <div class="paragraph">
 <p>While I am not new to blogging, I was re-inspired by <a href="https://www.linkedin.com/in/sasiperi/">Sasi Peri</a>, a coworker, and her new <a href="https://sasiperi.github.io/">blog</a>.  This gave me the itch to share my experiences and information with hope of helping others.</p>
@@ -256,7 +259,10 @@
 <div class="ulist">
 <ul>
 <li>
-<p>host at: <a href="https://jshingler.github.io" class="bare">https://jshingler.github.io</a></p>
+<p>static site hosted at: <a href="https://jshingler.github.io" class="bare">https://jshingler.github.io</a> (<a href="https://github.com/jshingler/jshingler.github.io" class="bare">https://github.com/jshingler/jshingler.github.io</a>)</p>
+</li>
+<li>
+<p>Site Source stored at: <a href="https://github.com/jshingler/jshingler-blog" class="bare">https://github.com/jshingler/jshingler-blog</a></p>
 </li>
 <li>
 <p>make publishing as easy as possbile and looking great</p>
@@ -298,6 +304,8 @@ Start with <a href="https://www.youtube.com/playlist?list=PLLAZ4kZ9dFpOnyRlyS-li
 </table>
 </div>
 <hr>
+</div>
+</div>
 <div class="sect1">
 <h2 id="_install_tools">Install Tools</h2>
 <div class="sectionbody">
@@ -313,7 +321,7 @@ Start with <a href="https://www.youtube.com/playlist?list=PLLAZ4kZ9dFpOnyRlyS-li
 <div class="sect2">
 <h3 id="_install_asciidoctor">Install AsciiDoctor</h3>
 <div class="paragraph">
-<p>AsciiDoctor has a good installation <a href="https://asciidoctor.org/docs/install-toolchain/">instructions</a></p>
+<p>AsciiDoctor has good installation <a href="https://asciidoctor.org/docs/install-toolchain/">instructions</a></p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -389,6 +397,30 @@ git init</code></pre>
 <pre class="prettyprint highlight linenums"><code class="language-source" data-lang="source">git clone https://github.com/devcows/hugo-universal-theme.git themes/hugo-universal-theme</code></pre>
 </div>
 </div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+Don&#8217;t for get to push the source back to your git repository. For me that is: <a href="https://github.com/jshingler/jshingler-blog" class="bare">https://github.com/jshingler/jshingler-blog</a>.
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+As Charly3pins points out in his blog, you can also set your theme up as a submodule.
+</td>
+</tr>
+</table>
+</div>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -432,17 +464,41 @@ If you haven&#8217;t already done it, &#8230;&#8203; Do yourself a favor, watch 
 </div>
 <div class="sect2">
 <h3 id="_publish_to_github">Publish to Github</h3>
-<div class="admonitionblock caution">
+<div class="paragraph">
+<p>Some really good instructions from the Hugo docs on <a href="https://gohugo.io/hosting-and-deployment/hosting-on-github/#types-of-github-pages">Publishing to Github.io</a> and more information on the <a href="https://help.github.com/en/github/working-with-github-pages/about-github-pages#user&#8212;&#8203;organization-pages">github help pages</a></p>
+</div>
+<div class="admonitionblock warning">
 <table>
 <tr>
 <td class="icon">
-<i class="fa icon-caution" title="Caution"></i>
+<i class="fa icon-warning" title="Warning"></i>
 </td>
 <td class="content">
-Add Info on publishing to github.io
+Github pages have <a href="https://help.github.com/en/github/working-with-github-pages/about-github-pages#usage-limits">usage limits</a>, I might have to figure out a different hosting option.
 </td>
 </tr>
 </table>
+</div>
+<div class="paragraph">
+<p>I choose to use a user page <a href="https://jshingler.github.io" class="bare">https://jshingler.github.io</a>. Make sure you have created <code><code>&lt;USERNAME&gt;.github.io</code></code> (E.g. <a href="https://github.com/jshingler/jshingler.github.io" class="bare">https://github.com/jshingler/jshingler.github.io</a>) repository on the github website. This is where the static content will be published to and served from.  While it might be tempting, <strong>NEVER DIRECTLY MODIFY THE STATIC SITE</strong>, always republish from the your hugo blog repository.</p>
+</div>
+<div class="quoteblock">
+<blockquote>
+<div class="paragraph">
+<p>Finally you need to add the &lt;USERNAME&gt;.github.io repo inside the public folder as a git submodule in order to update your website once you regenerate the site.</p>
+</div>
+</blockquote>
+<div class="attribution">
+&#8212; Charly3pins
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="prettyprint highlight linenums"><code class="language-source" data-lang="source">git submodule add -b master https://github.com/jshingler/jshingler.github.io.git public</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Now publish the website.  Here is a slightly modified script from Charly3Pin&#8217;s blog to publish the site.</p>
 </div>
 <div class="listingblock">
 <div class="title">deploy.sh - slightly modified from Charly3Pins</div>
@@ -495,6 +551,16 @@ cd ..</code></pre>
 <div class="sect1">
 <h2 id="_more_to_come">MORE TO COME!!!</h2>
 <div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Code Formating (Google Code Prettify)</p>
+</li>
+<li>
+<p>Custom CSS to fix AsciiDoc</p>
+</li>
+</ul>
+</div>
 <hr>
 <div class="paragraph">
 <p>Content:</p>
@@ -528,9 +594,11 @@ cd ..</code></pre>
 <a href="https://rgielen.net/posts/2019/creating-a-dockerized-hugo-asciidoctor-toolchain/">Creating a Dockerized Hugo + AsciiDoctor Toolchain</a>.  Next, I am thinking about using this with <a href="https://help.github.com/en/actions">GitHub worksflows and actions</a> to that when I push a change to the master branch of my repository, the website is automatically rebuilt and published.</p>
 </div>
 <hr>
-<div class="paragraph">
-<p>Resources:</p>
 </div>
+</div>
+<div class="sect1">
+<h2 id="_resources_credits">Resources / Credits:</h2>
+<div class="sectionbody">
 <div class="ulist">
 <ul>
 <li>
