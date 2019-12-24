@@ -570,9 +570,7 @@ While I am not new to blogging, I was re-inspired by https://www.linkedin.com/in
 <div class="listingblock">
 <div class="title">Add this snippet to the head.html file</div>
 <div class="content">
-<pre class="prettyprint highlight"><code data-lang="linenums">{{ range .Site.Params.custom_css -}}
-    &lt;link rel="stylesheet" href="{{ . | absURL }}"&gt;
-{{- end }}</code></pre>
+<pre class="prettyprint highlight"><code data-lang="linenums">link:https://raw.githubusercontent.com/jshingler/jshingler-blog/master/layouts/partials/head.html[tag=customcss]</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -581,9 +579,7 @@ While I am not new to blogging, I was re-inspired by https://www.linkedin.com/in
 <div class="listingblock">
 <div class="title">Define an array of custom css</div>
 <div class="content">
-<pre class="prettyprint highlight"><code>[params]
-    # Custom CSS
-    custom_css = ["css/custom.css"]</code></pre>
+<pre class="prettyprint highlight"><code>link:https://raw.githubusercontent.com/jshingler/jshingler-blog/master/config.toml[tag=customcss]</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -632,7 +628,7 @@ While I am not new to blogging, I was re-inspired by https://www.linkedin.com/in
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="prettyprint highlight"><code data-lang="html">&lt;script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js?skin=sons-of-obsidian"&gt;&lt;/script&gt;</code></pre>
+<pre class="prettyprint highlight"><code data-lang="html">link:https://raw.githubusercontent.com/jshingler/jshingler-blog/master/layouts/partials/scripts.html[tag=codeformat]</code></pre>
 </div>
 </div>
 </div>
@@ -662,125 +658,7 @@ ${HOME}/.rvm/gems/ruby-2.4.0/bin/asciidoctor -a allow-uri-read $*</code></pre>
 <div class="listingblock">
 <div class="title">Sample including a portion of the <code><code>config.toml</code></code> file</div>
 <div class="content">
-<pre class="prettyprint highlight linenums"><code data-lang="source">[params]
-    # Custom CSS
-    custom_css = ["css/custom.css"]
-
-
-    viewMorePostLink = "/blog/"
-    author = "Jim Shingler"
-    defaultKeywords = ["jshingler", "Jim Shingler", "James Shingler", "Shingler", "Schindler", "Lean", "Agile", "devOps", "java", "Spring", "Cloud Native", "Microservices", "hugo", "go"]
-    mainSections = ["blog"]
-    defaultDescription = "Jim Shingler Blog about interestes: Professional ( lean, agile, devOps, devSecOps ), Technical ( Java, Spring, Cloud Native, Microservices ), Personal Development ( ThinkScript ), Growth, and Learning"
-    #defaultDescription = "Site template made by devcows using hugo"
-
-    # Social media
-    facebook_site = "" # the Facebook handle of your site ('https://www.facebook.com/HANDLE')
-    twitter_site = "GoHugoIO" # the Twitter handle of your site (without the '@')
-    default_sharing_image = "img/sharing-default.png"
-
-    # Google Maps API key (if not set will default to not passing a key.)
-    googleMapsApiKey = "AIzaSyA1N45cD4qWwsgnuE1F39p1SYaM0w0ldQg"
-
-    # Style options: default (light-blue), blue, green, marsala, pink, red, turquoise, violet
-    style = "default"
-
-    # Since this template is static, the contact form uses www.formspree.io as a
-    # proxy. The form makes a POST request to their servers to send the actual
-    # email. Visitors can send up to a 1000 emails each month for free.
-    #
-    # What you need to do for the setup?
-    #
-    # - set your email address under 'email' below
-    # - upload the generated site to your server
-    # - send a dummy email yourself to confirm your account
-    # - click the confirm link in the email from www.formspree.io
-    # - you're done. Happy mailing!
-    #
-    # Enable the contact form by entering your Formspree.io email
-    email = "shinglerjim@gmail.com"
-    contact_form_ajax = false
-
-    about_us = "&lt;p&gt;Always Be Learning.&lt;/p&gt;"
-    copyright = "Copyright (c) 2015 - 2020, JShingler; all rights reserved."
-
-    # Format dates with Go's time formatting
-    date_format = "January 2, 2006"
-
-    #logo = "img/logo.png"
-    logo = "img/JShingler2.png"
-    #logo_small = "img/logo-small.png"
-    address = """&lt;p&gt;&lt;strong&gt;Jim Shingler&lt;/strong&gt;
-        &lt;br&gt;
-        &lt;br&gt;
-        &lt;br&gt;Columbus
-        &lt;br&gt;OH
-        &lt;br&gt;
-        &lt;strong&gt;USA&lt;/strong&gt;
-      &lt;/p&gt;
-      """
-    latitude = "39.983334"
-    longitude = "-82.983330"
-
-[Permalinks]
-    blog = "/blog/:year/:month/:day/:filename/"
-
-# Enable or disable top bar with social icons
-[params.topbar]
-    enable = true
-    #text = """&lt;p class="hidden-sm hidden-xs"&gt;Contact us on +420 777 555 333 or hello@universal.com.&lt;/p&gt;
-    text = """&lt;p class="hidden-sm hidden-xs"&gt;&lt;/p&gt;
-      &lt;p class="hidden-md hidden-lg"&gt;&lt;a href="#" data-animate-hover="pulse"&gt;&lt;i class="fas fa-phone"&gt;&lt;/i&gt;&lt;/a&gt;
-      &lt;a href="#" data-animate-hover="pulse"&gt;&lt;i class="fas fa-envelope"&gt;&lt;/i&gt;&lt;/a&gt;
-      &lt;/p&gt;
-      """
-
-# Enable and disable widgets for the right sidebar
-[params.widgets]
-    categories = true
-    tags = true
-    search = true
-
-[params.carousel]
-    enable = false
-    # All carousel items are defined in their own files. You can find example items
-    # at 'exampleSite/data/carousel'.
-    # For more informtion take a look at the README.
-
-[params.features]
-    enable = false
-    # All features are defined in their own files. You can find example items
-    # at 'exampleSite/data/features'.
-    # For more informtion take a look at the README.
-
-[params.testimonials]
-    enable = false
-    # All testimonials are defined in their own files. You can find example items
-    # at 'exampleSite/data/testimonials'.
-    # For more informtion take a look at the README.
-    title = "Testimonials"
-    subtitle = "We have worked with many clients and we always like to hear they come out from the cooperation happy and satisfied. Have a look what our clients said about us."
-
-[params.see_more]
-    enable = false
-    icon = "far fa-file-alt"
-    title = "Do you want to see more?"
-    subtitle = "We have prepared for you more than 40 different HTML pages, including 5 variations of homepage."
-    link_url = "#"
-    link_text = "Check other homepages"
-
-[params.clients]
-    enable = false
-    # All clients are defined in their own files. You can find example items
-    # at 'exampleSite/data/clients'.
-    # For more informtion take a look at the README.
-    title = "Our Clients"
-    subtitle = ""
-
-[params.recent_posts]
-    enable = true
-    title = "Jim Shingler blog"
-    subtitle = "Thoughts on: Technical, Professional, and Personal Development"</code></pre>
+<pre class="prettyprint highlight linenums"><code data-lang="source">link:https://raw.githubusercontent.com/jshingler/jshingler-blog/master/config.toml[tag=features]</code></pre>
 </div>
 </div>
 </div>
@@ -1049,7 +927,7 @@ cd ..</code></pre>
             </li>
             
             <li>
-                <a href="/categories/programming">programming (3)</a>
+                <a href="/categories/programming">programming (4)</a>
             </li>
             
             <li>
@@ -1175,6 +1053,19 @@ cd ..</code></pre>
                 
                 <div class="item same-height-row clearfix">
                     <div class="image same-height-always">
+                        <a href="https://jshingler.github.io/blog/2019/12/23/my-development-tools/">
+                          
+                            <img src="/img/blog/my-development-tools/toolbox.png" class="img-responsive" alt="My Development Tools">
+                          
+                        </a>
+                    </div>
+                    <div class="name same-height-always">
+                        <h5><a href="https://jshingler.github.io/blog/2019/12/23/my-development-tools/">My Development Tools</a></h5>
+                    </div>
+                </div>
+                
+                <div class="item same-height-row clearfix">
+                    <div class="image same-height-always">
                         <a href="https://jshingler.github.io/blog/2019/12/07/pearl-harbor-day/">
                           
                             <img src="/img/banners/uss-arizona.jpg" class="img-responsive" alt="Pearl Harbor Day">
@@ -1196,19 +1087,6 @@ cd ..</code></pre>
                     </div>
                     <div class="name same-height-always">
                         <h5><a href="https://jshingler.github.io/blog/2019/12/07/creating-this-site/">Creating This Site</a></h5>
-                    </div>
-                </div>
-                
-                <div class="item same-height-row clearfix">
-                    <div class="image same-height-always">
-                        <a href="https://jshingler.github.io/blog/2018/09/15/devops-resources/">
-                          
-                            <img src="/img/devops/devops-cycle.png" class="img-responsive" alt="Devops Resources">
-                          
-                        </a>
-                    </div>
-                    <div class="name same-height-always">
-                        <h5><a href="https://jshingler.github.io/blog/2018/09/15/devops-resources/">Devops Resources</a></h5>
                     </div>
                 </div>
                 
