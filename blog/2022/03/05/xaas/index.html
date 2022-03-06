@@ -311,7 +311,10 @@ A clear direction and guide rails with reference architecture and implementation
 <div class="ulist">
 <ul>
 <li>
-<p>Organizational Change Management Security</p>
+<p>Organizational Change Management</p>
+</li>
+<li>
+<p>Security</p>
 </li>
 <li>
 <p>Flexibility</p>
@@ -697,27 +700,307 @@ Traditional OnPrem will not be addressed in this post.
 </div>
 <div class="sect2">
 <h3 id="_caas">CaaS</h3>
-
+<div class="paragraph">
+<p>CaaS is the next level of Virtualization. Virtual machines have complete copies of an operating system and run on a hypervisor. Virtual Machines use significantly more resources compared to Container Technology. Containers share an underlying OS Kernal and contain only the minimum additional components. Containers are typically much lighter weight and faster compared to virtual machines,</p>
+</div>
+<div class="paragraph">
+<p><strong>Benefits:</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Scalability</p>
+</li>
+<li>
+<p>Flexibility</p>
+</li>
+<li>
+<p>Resource Usage</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>Workloads:</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Containerized Legacy Monoliths</p>
+</li>
+<li>
+<p>Commercial Products</p>
+</li>
+<li>
+<p>If not already containerized will they?</p>
+</li>
+<li>
+<p>Open Source Products
+If not should we containerize it, do we want to contribute to the product?</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Redis</p>
+</li>
+<li>
+<p>Kafka</p>
+</li>
+<li>
+<p>Rabbit MQ</p>
+</li>
+<li>
+<p>DevSecOps Tools:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Concourse / Jenkins / Github Actions  / GitLab</p>
+</li>
+<li>
+<p>Binary Repo (Nexus) Container Repo (Harbor, Clair) SonarQube</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>Implications:</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Very little process improvements without additional efforts</p>
+</li>
+<li>
+<p>Automation and Consistency require additional efforts</p>
+</li>
+<li>
+<p>Skills Uplift: (Development and Platform Teams)</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Cloud Vendor Specific tooling and processes</p>
+</li>
+<li>
+<p>Automation tooling</p>
+</li>
+<li>
+<p>Container Technology (Docker)</p>
+</li>
+<li>
+<p>Container Specification and Orchestration Technology (Kubernetes)</p>
+</li>
+<li>
+<p>Network (Development Team)</p>
+</li>
+<li>
+<p>Security (Development Team)</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Additional supporting efforts required for success</p>
+</li>
+<li>
+<p>Roles and Responsibility Clarification</p>
+</li>
+<li>
+<p>What is Development Teams Responsibility?</p>
+</li>
+</ul>
+</div>
 </div>
 <div class="sect2">
 <h3 id="_paas">PaaS</h3>
-
+<div class="paragraph">
+<p>PaaS is an opinionated Application Infrastructure Framework that enable Development Speed. While opinionated, PaaS is still relatively flexible.</p>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+Not all PaaSs are equal. PaaSs offer a variety of capabilities and restrictions. For Example: PCF offers additional value added capabilites overy Open Source Cloud Foundry.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p><strong>Benefits:</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Developer Experience and Effectiveness</p>
+</li>
+<li>
+<p>Very low barrier of development entry</p>
+</li>
+<li>
+<p>Development isn&#8217;t required to learn Networking and Infrastructure</p>
+</li>
+<li>
+<p>Scalability</p>
+</li>
+<li>
+<p>Self-Service</p>
+</li>
+<li>
+<p>Easy to use</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>Workloads:</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Customer Development Business Services</p>
+</li>
+<li>
+<p>Web Frontends</p>
+</li>
+<li>
+<p>Batch</p>
+</li>
+<li>
+<p>Event Processing</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>Implications:</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>PCF has additional Licensing Costs</p>
+</li>
+<li>
+<p>Lends itself to Automation, Consistency, and DevSecOps</p>
+</li>
+<li>
+<p>Skills Uplift is relatively easy and focuses on Cloud Native Implementation</p>
+</li>
+</ul>
+</div>
 </div>
 <div class="sect2">
 <h3 id="_faas">FaaS</h3>
-
+<div class="paragraph">
+<p>FaaS is the Newest of the "aaS" solutions. FaaS further extends the capabilities and benefits of PaaS.</p>
+</div>
+<div class="paragraph">
+<p>ERROR: Additional Research and Monitoring recommended. KNative while still young shows a great degree of promise.</p>
+</div>
+<div class="paragraph">
+<p><strong>Benefits:</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>TBD</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>Workloads:</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>TBD</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>Implications:</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Many of the current FaaS solutions are vendor specific and cause vendor coupling.</p>
+</li>
+<li>
+<p>TBD</p>
+</li>
+</ul>
+</div>
 </div>
 <div class="sect2">
 <h3 id="_saas">SaaS</h3>
-
+<div class="paragraph">
+<p>SaaS evolved out of Application Service Providers and is the most mature and well known of the "aaS"s.</p>
+</div>
+<div class="paragraph">
+<p><strong>Benefits:</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Operations handled by Vendor</p>
+</li>
+<li>
+<p>Standardize Solutions</p>
+</li>
+<li>
+<p>Minimal Investment of Time and Money</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>Workloads:</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Anything NOT the Business Secret Sauce.</p>
+</li>
+<li>
+<p>Context Business Needs 6</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>Implications:</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Maybe completely Outsource</p>
+</li>
+<li>
+<p>Dont Generate Revenue</p>
+</li>
+<li>
+<p>Easily Replaced</p>
+</li>
+</ul>
+</div>
 </div>
 <div class="sect2">
 <h3 id="_where_should_i_run_my_application">Where should I run my application</h3>
-
+<div class="paragraph">
+<p>The below represents, at a high level, where an application should run in the cloud.</p>
+</div>
+<div class="paragraph">
+<p>&lt;&lt; Decision Tree &gt;&gt;</p>
+</div>
 </div>
 <div class="sect2">
 <h3 id="_when_to_caas_containerize">When to CaaS Containerize</h3>
-
+<div class="paragraph">
+<p>Containers are the preferred approach for making application deployment and Dev/Ops fundamental to all applications and their teams. There are things to take into account when making your decision to modify your application to run in a container. Provided below is a decision tree to help with making this determination.</p>
+</div>
+<div class="paragraph">
+<p>&lt;&lt; Decision Tree &gt;&gt;</p>
+</div>
 </div>
 </div>
 </div>
