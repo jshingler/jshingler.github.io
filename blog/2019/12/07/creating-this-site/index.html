@@ -780,7 +780,18 @@ ${HOME}/.rvm/gems/ruby-2.4.0/bin/asciidoctor -a allow-uri-read $*</code></pre>
 [params.recent_posts]
     enable = true
     title = "Jim Shingler blog"
-    subtitle = "Thoughts on: Technical, Professional, and Personal Development"</code></pre>
+    subtitle = "Thoughts on: Technical, Professional, and Personal Development"
+
+[security]
+  enableInlineShortcodes = false
+  [security.exec]
+    allow = ['^dart-sass-embedded$', '^go$', '^npx$', '^postcss$', '^asciidoctor$']
+    osEnv = ['(?i)^((HTTPS?|NO)_PROXY|PATH(EXT)?|APPDATA|TE?MP|TERM|GO\w+)$']
+  [security.funcs]
+    getenv = ['^HUGO_', '^CI$']
+  [security.http]
+    methods = ['(?i)GET|POST']
+    urls = ['.*']</code></pre>
 </div>
 </div>
 </div>
