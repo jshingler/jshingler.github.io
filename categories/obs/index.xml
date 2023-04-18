@@ -6,11 +6,7 @@
     <description>Recent content in OBS on Jim Shingler Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 31 Jan 2021 21:28:30 -0500</lastBuildDate>
-    
-	<atom:link href="https://jshingler.github.io/categories/obs/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Sun, 31 Jan 2021 21:28:30 -0500</lastBuildDate><atom:link href="https://jshingler.github.io/categories/obs/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Obs Virtual Cables</title>
       <link>https://jshingler.github.io/blog/2021/01/31/obs-virtual-cables/</link>
@@ -18,8 +14,8 @@
       
       <guid>https://jshingler.github.io/blog/2021/01/31/obs-virtual-cables/</guid>
       <description>During covid, we all find ourselves on Zoom and Teams meetings doing presentations.
- Using standard Zoom and Teams, you share your slide deck and narrate it as Chris Judd says, &#34;as a disemboded voice.&#34; It isn&amp;#8217;t very engaging.
- Chris Judd introduce me to OBS - Open Broadcaster Software. OBS really is an amazing piece of software. If you watch youtube or twitch, they are probably using OBS to make their streams.</description>
+Using standard Zoom and Teams, you share your slide deck and narrate it as Chris Judd says, &amp;#34;as a disemboded voice.&amp;#34; It isn’t very engaging.
+Chris Judd introduce me to OBS - Open Broadcaster Software. OBS really is an amazing piece of software. If you watch youtube or twitch, they are probably using OBS to make their streams.</description>
     </item>
     
   </channel>

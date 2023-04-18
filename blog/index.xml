@@ -6,10 +6,16 @@
     <description>Recent content in Blogs on Jim Shingler Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 05 Mar 2022 20:29:20 -0500</lastBuildDate>
-    
-	<atom:link href="https://jshingler.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
-    
+    <lastBuildDate>Sat, 01 Apr 2023 12:37:26 -0400</lastBuildDate><atom:link href="https://jshingler.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Value Line</title>
+      <link>https://jshingler.github.io/blog/2023/04/01/valueline/</link>
+      <pubDate>Sat, 01 Apr 2023 12:37:26 -0400</pubDate>
+      
+      <guid>https://jshingler.github.io/blog/2023/04/01/valueline/</guid>
+      <description>I first heard of The Value Line from James Watters in a presentation about Cloud Foundry and how Cloud Foundry helps keep a companies most valuable asset, People, above the value line, out of toil, and innovating business value. The Value Line is a great thinking tool. The Value Line is similar to another idea from Geoffery Moore, &amp;#34;Core vs Context&amp;#34; in his book Dealing with Darwin.
+&amp;#34;The Value Line&amp;#34; and &amp;#34;Core vs Context&amp;#34; combine to create a thinking framework.</description>
+    </item>
     
     <item>
       <title>XaaS</title>
@@ -17,8 +23,8 @@
       <pubDate>Sat, 05 Mar 2022 20:29:20 -0500</pubDate>
       
       <guid>https://jshingler.github.io/blog/2022/03/05/xaas/</guid>
-      <description>1. Abstract Cloud offers a variety of solutions and approaches: IaaS, CaaS, PaaS, FaaS, and SaaS. It isn&amp;#8217;t always clear which solutions and approaches are appropriate. The purpose of this paper is to clarify the approaches, their implications, appropriate usage, and confirm Intents.
-     I am trying something new. I am going write this blog post in the open. I will start writing my thoughts and ideas, and you will be able to see and comment on the blog as it is developed.</description>
+      <description>1. Abstract Cloud offers a variety of solutions and approaches: IaaS, CaaS, PaaS, FaaS, and SaaS. It isn’t always clear which solutions and approaches are appropriate. The purpose of this paper is to clarify the approaches, their implications, appropriate usage, and confirm Intents.
+I am trying something new. I am going write this blog post in the open. I will start writing my thoughts and ideas, and you will be able to see and comment on the blog as it is developed.</description>
     </item>
     
     <item>
@@ -27,9 +33,8 @@
       <pubDate>Sat, 30 Oct 2021 20:11:37 -0400</pubDate>
       
       <guid>https://jshingler.github.io/blog/2021/10/30/personal-knowledge-system/</guid>
-      <description>Operating with &#34;Structural Integrity&#34; is required to be a breakout performer  &amp;#8212; August Bradley
-Life Design   I have always been a attracted to Personal Improvement. From the earlies days of my career, I kept a personal journal of my experiences, problems encoutered, and ways to solve the problem. Whenever I figured something out, I wrote it down for my future self.
- As I progressed in my career and had more and more demands, my existing systems of keeping track of everything started failing.</description>
+      <description>Operating with &amp;#34;Structural Integrity&amp;#34; is required to be a breakout performer — August Bradley Life Design I have always been a attracted to Personal Improvement. From the earlies days of my career, I kept a personal journal of my experiences, problems encoutered, and ways to solve the problem. Whenever I figured something out, I wrote it down for my future self.
+As I progressed in my career and had more and more demands, my existing systems of keeping track of everything started failing.</description>
     </item>
     
     <item>
@@ -39,8 +44,8 @@ Life Design   I have always been a attracted to Personal Improvement. From the e
       
       <guid>https://jshingler.github.io/blog/2021/01/31/obs-virtual-cables/</guid>
       <description>During covid, we all find ourselves on Zoom and Teams meetings doing presentations.
- Using standard Zoom and Teams, you share your slide deck and narrate it as Chris Judd says, &#34;as a disemboded voice.&#34; It isn&amp;#8217;t very engaging.
- Chris Judd introduce me to OBS - Open Broadcaster Software. OBS really is an amazing piece of software. If you watch youtube or twitch, they are probably using OBS to make their streams.</description>
+Using standard Zoom and Teams, you share your slide deck and narrate it as Chris Judd says, &amp;#34;as a disemboded voice.&amp;#34; It isn’t very engaging.
+Chris Judd introduce me to OBS - Open Broadcaster Software. OBS really is an amazing piece of software. If you watch youtube or twitch, they are probably using OBS to make their streams.</description>
     </item>
     
     <item>
@@ -49,17 +54,23 @@ Life Design   I have always been a attracted to Personal Improvement. From the e
       <pubDate>Mon, 23 Dec 2019 13:21:13 -0500</pubDate>
       
       <guid>https://jshingler.github.io/blog/2019/12/23/my-development-tools/</guid>
-      <description>In this blog, I will describe the development setup on my mac book pro.
- System MacBook Pro:
-   MacBook Pro (Retina, 15-inch Late 2013)
-  Processor 2.6 Ghz Quad-Core Intel Core i7
-  Memory 16 GB 1600 Mhz DDR3
-   Tools:
-   Docker for Mac
-  iTerm2
-  OhMyZsh
-  SDKMan
-  Java 11 (installed and managed by SDKMan)</description>
+      <description> In this blog, I will describe the development setup on my mac book pro.
+System MacBook Pro:
+MacBook Pro (Retina, 15-inch Late 2013)
+Processor 2.6 Ghz Quad-Core Intel Core i7
+Memory 16 GB 1600 Mhz DDR3
+Tools:
+Docker for Mac
+iTerm2
+OhMyZsh
+SDKMan
+Java 11 (installed and managed by SDKMan)
+Gradle (installed managed by SDKMan)
+VS Code
+npm
+NodeJS
+Plugins: IntelliJ
+Plugins: </description>
     </item>
     
     <item>
@@ -69,10 +80,10 @@ Life Design   I have always been a attracted to Personal Improvement. From the e
       
       <guid>https://jshingler.github.io/blog/2019/12/07/pearl-harbor-day/</guid>
       <description>December 7, 1941,78 Years ago, was a day we should never forget. Many people lost their lives that day.
- We should never forget the ultimate sacrific that was made by the Greatest Generation.
- Please Take a minute to pray for all of our veterans past, present, and future.
- May God watch over you.
- Pearl Harbor veterans&#39; memories of the &#39;day of infamy&#39; live on after 78 years</description>
+We should never forget the ultimate sacrific that was made by the Greatest Generation.
+Please Take a minute to pray for all of our veterans past, present, and future.
+May God watch over you.
+Pearl Harbor veterans&amp;#39; memories of the &amp;#39;day of infamy&amp;#39; live on after 78 years</description>
     </item>
     
     <item>
@@ -82,7 +93,7 @@ Life Design   I have always been a attracted to Personal Improvement. From the e
       
       <guid>https://jshingler.github.io/blog/2019/12/07/creating-this-site/</guid>
       <description>While I am not new to blogging, I was re-inspired by Sasi Peri, a coworker, and her new blog. This gave me the itch to share my experiences and information with hope of helping others..
- Now that I was re-inspired to blog, I had a fortunate conversation with Drew Heintz. Drew is a bright young man finishing up his Computer Science and Security degrees from RIT. Drew, shared with me that he did his resume using Hugo.</description>
+Now that I was re-inspired to blog, I had a fortunate conversation with Drew Heintz. Drew is a bright young man finishing up his Computer Science and Security degrees from RIT. Drew, shared with me that he did his resume using Hugo.</description>
     </item>
     
     <item>
@@ -92,12 +103,16 @@ Life Design   I have always been a attracted to Personal Improvement. From the e
       
       <guid>https://jshingler.github.io/blog/2018/09/15/devops-resources/</guid>
       <description>DevOps Resources I am frequently asked for resources to help people learn about devOps. This is a collection of resources that have influenced my journey and thinking about DevOps.
-   Books The Goal - Awesome on Audible
- Theory of Constraints Website
-    The Phoenix Project
-    Beyond the The Phoenix Project
-    The DevOps HandBook
- The DevOps Handbook - Website</description>
+Books The Goal - Awesome on Audible
+Theory of Constraints Website
+The Phoenix Project
+Beyond the The Phoenix Project
+The DevOps HandBook
+The DevOps Handbook - Website
+Value Stream Mapping
+Website
+Slideshow
+Accelerate: The Science of Lean Software and DevOps: Building and Scaling High Performing Technology Organizations</description>
     </item>
     
     <item>
@@ -107,8 +122,8 @@ Life Design   I have always been a attracted to Personal Improvement. From the e
       
       <guid>https://jshingler.github.io/blog/2015/10/10/migrate-from-jekyll/</guid>
       <description>Move static content to static Jekyll has a rule that any directory not starting with _ will be copied as-is to the _site output. Hugo keeps all static content under static. You should therefore move it all there. With Jekyll, something that looked like
-▾ &amp;lt;root&amp;gt;/ ▾ images/ logo.png  should become
-▾ &amp;lt;root&amp;gt;/ ▾ static/ ▾ images/ logo.png  Additionally, you&amp;rsquo;ll want any files that should reside at the root (such as CNAME) to be moved to static.</description>
+▾ &amp;lt;root&amp;gt;/ ▾ images/ logo.png should become
+▾ &amp;lt;root&amp;gt;/ ▾ static/ ▾ images/ logo.png Additionally, you&amp;rsquo;ll want any files that should reside at the root (such as CNAME) to be moved to static.</description>
     </item>
     
     <item>
@@ -118,7 +133,7 @@ Life Design   I have always been a attracted to Personal Improvement. From the e
       
       <guid>https://jshingler.github.io/blog/2015/10/02/linked-post/</guid>
       <description>I&amp;rsquo;m a linked post in the menu. You can add other posts by adding the following line to the frontmatter:
-menu = &amp;quot;main&amp;quot;  Lorem ipsum dolor sit amet, consectetur adipiscing elit. In mauris nulla, vestibulum vel auctor sed, posuere eu lorem. Aliquam consequat augue ut accumsan mollis. Suspendisse malesuada sodales tincidunt. Vivamus sed erat ac augue bibendum porta sed id ipsum. Ut mollis mauris eget ligula sagittis cursus. Aliquam id pharetra tellus.</description>
+menu = &amp;quot;main&amp;quot; Lorem ipsum dolor sit amet, consectetur adipiscing elit. In mauris nulla, vestibulum vel auctor sed, posuere eu lorem. Aliquam consequat augue ut accumsan mollis. Suspendisse malesuada sodales tincidunt. Vivamus sed erat ac augue bibendum porta sed id ipsum. Ut mollis mauris eget ligula sagittis cursus. Aliquam id pharetra tellus.</description>
     </item>
     
     <item>
@@ -142,7 +157,7 @@ Save it somewhere specific as we will be using it in the next step.
 More complete instructions are available at installing hugo
 Step 2. Build the Docs Hugo has its own example site which happens to also be the documentation site you are reading right now.
 Follow the following steps:
- Clone the hugo repository Go into the repo Run hugo in server mode and build the docs Open your browser to http://localhost:1313  Corresponding pseudo commands:</description>
+Clone the hugo repository Go into the repo Run hugo in server mode and build the docs Open your browser to http://localhost:1313 Corresponding pseudo commands:</description>
     </item>
     
     <item>

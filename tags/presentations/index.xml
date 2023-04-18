@@ -6,29 +6,20 @@
     <description>Recent content in presentations on Jim Shingler Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 08 Dec 2019 22:23:24 -0500</lastBuildDate>
-    
-	<atom:link href="https://jshingler.github.io/tags/presentations/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Sun, 08 Dec 2019 22:23:24 -0500</lastBuildDate><atom:link href="https://jshingler.github.io/tags/presentations/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Presentations</title>
       <link>https://jshingler.github.io/presentations/</link>
       <pubDate>Sun, 08 Dec 2019 22:23:24 -0500</pubDate>
       
       <guid>https://jshingler.github.io/presentations/</guid>
-      <description>Presentations       DevOpsDays Columbus 2018
-DevOps is a journey, Not an event
-Slides
-      DevOpsDays Columbus 2018
-DevOps is a journey, Not an event
-YouTube Video Slides
-     Cloud Foundry Summit 2017
-HIPAA Solutions on Cloud Foundry
-Slides
-     COJUG 2017
-Make Your Project Fly with Concourse
-Slides</description>
+      <description>Presentations DevOpsDays Columbus 2018 DevOps is a journey, Not an event Slides
+DevOpsDays Columbus 2018 DevOps is a journey, Not an event YouTube Video Slides
+Cloud Foundry Summit 2017 HIPAA Solutions on Cloud Foundry Slides
+COJUG 2017 Make Your Project Fly with Concourse Slides
+Spring One 2016 Personal Healthcare IOT on PCF using Spring Slides Pivotal Article
+YouTube Video
+Spring One 2GX 2011 Content Management with a Custom CMS Slides</description>
     </item>
     
   </channel>

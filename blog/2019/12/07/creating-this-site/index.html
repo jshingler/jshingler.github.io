@@ -18,7 +18,7 @@
   
   <meta name="description" content="This tutorial will show you how I created this site. It will use Hugo, Asciidoc via AsciiDoctor, and Github">
 
-  <meta name="generator" content="Hugo 0.68.0" />
+  <meta name="generator" content="Hugo 0.111.3">
 
   
 
@@ -241,11 +241,11 @@
 <p>Now that I was re-inspired to blog, I had a fortunate conversation with <a href="https://www.linkedin.com/in/andrew-heintz-93821513a/">Drew Heintz</a>.  Drew is a bright young man finishing up his Computer Science and Security degrees from <a href="https://rit.edu">RIT</a>.  Drew, shared with me that he did his resume using <a href="https://gohugo.io">Hugo</a>.  Hugo is similar to <a href="https://github.com/jekyll">jekyll static site generator</a> only written in <a href="https://golang.org">go</a> instead of <a href="https://ruby-lang.org">ruby</a>.</p>
 </div>
 <div class="paragraph">
-<p>After a little searching, I ran across <a href="https://www.youtube.com/playlist?list=PLLAZ4kZ9dFpOnyRlyS-liKL5ReHDcj4G3">Giraffe Academy Youtub Hugo Tutorial</a>. In addition, I found that Hugo and <a href="https://asciidoctor.org/">AsciiDoctor</a>, one of favorite tools, could be used together, <a href="https://rgielen.net/posts/2019/creating-a-blog-with-hugo-and-asciidoctor/">"Creating a Blog with Hugo and AsciiDoctor"</a>.</p>
+<p>After a little searching, I ran across <a href="https://www.youtube.com/playlist?list=PLLAZ4kZ9dFpOnyRlyS-liKL5ReHDcj4G3">Giraffe Academy Youtub Hugo Tutorial</a>. In addition, I found that Hugo and <a href="https://asciidoctor.org/">AsciiDoctor</a>, one of favorite tools, could be used together, <a href="https://rgielen.net/posts/2019/creating-a-blog-with-hugo-and-asciidoctor/">&#34;Creating a Blog with Hugo and AsciiDoctor&#34;</a>.</p>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="../../../../../img/blog/creating-this-site/VSCodeAsciidoc.png" alt="VS Code Asciidoc">
+<img src="../../../../../img/blog/creating-this-site/VSCodeAsciidoc.png" alt="VS Code Asciidoc"/>
 </div>
 <div class="title">Figure 1. AsciiDoc in VS Code</div>
 </div>
@@ -289,7 +289,7 @@
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -297,14 +297,14 @@
 Start with <a href="https://www.youtube.com/playlist?list=PLLAZ4kZ9dFpOnyRlyS-liKL5ReHDcj4G3">Giraffe Academy Youtub Hugo Tutorial</a> and <a href="https://charly3pins.github.io/post/building-static-blog-with-hugo/">Building a Static Blog with Hugo</a>
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
-<hr>
+<hr/>
 <div class="sect1">
 <h2 id="_install_tools">Install Tools</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>I&#8217;ll assume you already know <a href="https://git-scm.com/">Git</a> and have a <a href="http://github.com">Github</a> account.</p>
+<p>I’ll assume you already know <a href="https://git-scm.com/">Git</a> and have a <a href="http://github.com">Github</a> account.</p>
 </div>
 <div class="sect2">
 <h3 id="_install_go">Install Go</h3>
@@ -319,7 +319,7 @@ Start with <a href="https://www.youtube.com/playlist?list=PLLAZ4kZ9dFpOnyRlyS-li
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -327,7 +327,7 @@ Start with <a href="https://www.youtube.com/playlist?list=PLLAZ4kZ9dFpOnyRlyS-li
 AsciiDoctor requires ruby
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 </div>
 <div class="sect2">
@@ -335,7 +335,7 @@ AsciiDoctor requires ruby
 <div class="paragraph">
 <p>I am a Mac guy, so I installed Hugo from the <a href="https://gohugo.io/getting-started/installing/#install-hugo-from-tarball">tarball</a>.</p>
 </div>
-<hr>
+<hr/>
 </div>
 </div>
 </div>
@@ -353,14 +353,14 @@ AsciiDoctor requires ruby
 
 Congratulations! Your new Hugo site is created in /Users/jshingler/temp/hugo/jshingler.
 
-Just a few more steps and you're ready to go:
+Just a few more steps and you&#39;re ready to go:
 
 1. Download a theme into the same-named folder.
    Choose a theme from https://themes.gohugo.io/ or
-   create your own with the "hugo new theme &lt;THEMENAME&gt;" command.
+   create your own with the &#34;hugo new theme &lt;THEMENAME&gt;&#34; command.
 2. Perhaps you want to add some content. You can add single files
-   with "hugo new &lt;SECTIONNAME&gt;/&lt;FILENAME&gt;.&lt;FORMAT&gt;".
-3. Start the built-in live server via "hugo server".
+   with &#34;hugo new &lt;SECTIONNAME&gt;/&lt;FILENAME&gt;.&lt;FORMAT&gt;&#34;.
+3. Start the built-in live server via &#34;hugo server&#34;.
 
 Visit https://gohugo.io/ for quickstart guide and full documentation.</code></pre>
 </div>
@@ -370,7 +370,7 @@ Visit https://gohugo.io/ for quickstart guide and full documentation.</code></pr
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="../../../../../img/blog/creating-this-site/initialDirectorys.png" alt="Directory Structure">
+<img src="../../../../../img/blog/creating-this-site/initialDirectorys.png" alt="Directory Structure"/>
 </div>
 </div>
 </div>
@@ -393,19 +393,19 @@ git init</code></pre>
 </div>
 <div class="admonitionblock warning">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-warning" title="Warning"></i>
 </td>
 <td class="content">
-Don&#8217;t for get to push the source back to your git repository. For me that is: <a href="https://github.com/jshingler/jshingler-blog" class="bare">https://github.com/jshingler/jshingler-blog</a>.
+Don’t for get to push the source back to your git repository. For me that is: <a href="https://github.com/jshingler/jshingler-blog" class="bare">https://github.com/jshingler/jshingler-blog</a>.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -413,28 +413,28 @@ Don&#8217;t for get to push the source back to your git repository. For me that 
 As Charly3pins points out in his blog, you can also set your theme up as a submodule.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-If you haven&#8217;t already done it, &#8230;&#8203; Do yourself a favor, watch the <a href="https://www.youtube.com/playlist?list=PLLAZ4kZ9dFpOnyRlyS-liKL5ReHDcj4G3">Giraffe Academy Youtub Hugo Tutorial</a>
+If you haven’t already done it, …​ Do yourself a favor, watch the <a href="https://www.youtube.com/playlist?list=PLLAZ4kZ9dFpOnyRlyS-liKL5ReHDcj4G3">Giraffe Academy Youtub Hugo Tutorial</a>
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="paragraph">
-<p>Explore the theme, &#8230;&#8203; A really good place to look is the example site.  You can find it at: <code><code>themes/hugo-universal-them/exampleSite</code></code></p>
+<p>Explore the theme, …​ A really good place to look is the example site.  You can find it at: <code><code>themes/hugo-universal-them/exampleSite</code></code></p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_tune_the_theme">Tune the Theme</h3>
 <div class="paragraph">
-<p>The universal theme is pretty robust, &#8230;&#8203; It has a lot of features that I really don&#8217;t need for a Minimum Viable Product.  The <code><code>config.toml</code></code> file is used to configure the features.</p>
+<p>The universal theme is pretty robust, …​ It has a lot of features that I really don’t need for a Minimum Viable Product.  The <code><code>config.toml</code></code> file is used to configure the features.</p>
 </div>
 </div>
 <div class="sect2">
@@ -461,7 +461,7 @@ If you haven&#8217;t already done it, &#8230;&#8203; Do yourself a favor, watch 
 <div class="title">Default front matters</div>
 <div class="content">
 <pre class="prettyprint highlight"><code data-lang="asciidoc">---
-title: "Create This Site"
+title: &#34;Create This Site&#34;
 date: 2019-12-15T17:12:43-05:00 <i class="conum" data-value="1"></i><b>(1)</b>
 draft: true <i class="conum" data-value="2"></i><b>(2)</b>
 ---</code></pre>
@@ -469,7 +469,7 @@ draft: true <i class="conum" data-value="2"></i><b>(2)</b>
 </div>
 <div class="colist arabic">
 <table>
-<tr>
+<tbody><tr>
 <td><i class="conum" data-value="1"></i><b>1</b></td>
 <td>date the document was created</td>
 </tr>
@@ -477,7 +477,7 @@ draft: true <i class="conum" data-value="2"></i><b>(2)</b>
 <td><i class="conum" data-value="2"></i><b>2</b></td>
 <td>it starts as a draft.</td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="paragraph">
 <p>The theme supports additional attributes.</p>
@@ -486,20 +486,20 @@ draft: true <i class="conum" data-value="2"></i><b>(2)</b>
 <div class="title">Flushed out front matters for this theme.</div>
 <div class="content">
 <pre class="prettyprint highlight"><code data-lang="asciidoc">---
-title: "Creating This Site"
+title: &#34;Creating This Site&#34;
 date: 2019-12-07T13:46:46-05:00
 draft: false <i class="conum" data-value="1"></i><b>(1)</b>
-tags: ["golang", "programming", "theme", "hugo", "asciidoc"] <i class="conum" data-value="2"></i><b>(2)</b>
-categories: ["programming"] <i class="conum" data-value="3"></i><b>(3)</b>
-banner: "img/banners/banner-1.jpg" <i class="conum" data-value="4"></i><b>(4)</b>
-author: "Jim Shingler" <i class="conum" data-value="5"></i><b>(5)</b>
-description: "This tutorial will show you how I created this site. It will use Hugo, Asciidoc via AsciiDoctor, and Github" <i class="conum" data-value="6"></i><b>(6)</b>
+tags: [&#34;golang&#34;, &#34;programming&#34;, &#34;theme&#34;, &#34;hugo&#34;, &#34;asciidoc&#34;] <i class="conum" data-value="2"></i><b>(2)</b>
+categories: [&#34;programming&#34;] <i class="conum" data-value="3"></i><b>(3)</b>
+banner: &#34;img/banners/banner-1.jpg&#34; <i class="conum" data-value="4"></i><b>(4)</b>
+author: &#34;Jim Shingler&#34; <i class="conum" data-value="5"></i><b>(5)</b>
+description: &#34;This tutorial will show you how I created this site. It will use Hugo, Asciidoc via AsciiDoctor, and Github&#34; <i class="conum" data-value="6"></i><b>(6)</b>
 ---</code></pre>
 </div>
 </div>
 <div class="colist arabic">
 <table>
-<tr>
+<tbody><tr>
 <td><i class="conum" data-value="1"></i><b>1</b></td>
 <td>No Longer a draft</td>
 </tr>
@@ -523,7 +523,7 @@ description: "This tutorial will show you how I created this site. It will use H
 <td><i class="conum" data-value="6"></i><b>6</b></td>
 <td>a little description</td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="paragraph">
 <p>Now you start writing your asciidoc as usual.</p>
@@ -543,7 +543,7 @@ While I am not new to blogging, I was re-inspired by https://www.linkedin.com/in
 </div>
 <div class="colist arabic">
 <table>
-<tr>
+<tbody><tr>
 <td><i class="conum" data-value="1"></i><b>1</b></td>
 <td>use google code prettify to format code, more instructions to follow</td>
 </tr>
@@ -559,7 +559,7 @@ While I am not new to blogging, I was re-inspired by https://www.linkedin.com/in
 <td><i class="conum" data-value="4"></i><b>4</b></td>
 <td>where to find images for this post</td>
 </tr>
-</table>
+</tbody></table>
 </div>
 </div>
 <div class="sect3">
@@ -571,7 +571,7 @@ While I am not new to blogging, I was re-inspired by https://www.linkedin.com/in
 <div class="title">Add this snippet to the head.html file</div>
 <div class="content">
 <pre class="prettyprint highlight"><code data-lang="linenums">{{ range .Site.Params.custom_css -}}
-    &lt;link rel="stylesheet" href="{{ . | absURL }}"&gt;
+    &lt;link rel=&#34;stylesheet&#34; href=&#34;{{ . | absURL }}&#34;&gt;
 {{- end }}</code></pre>
 </div>
 </div>
@@ -583,7 +583,7 @@ While I am not new to blogging, I was re-inspired by https://www.linkedin.com/in
 <div class="content">
 <pre class="prettyprint highlight"><code>[params]
     # Custom CSS
-    custom_css = ["css/custom.css"]</code></pre>
+    custom_css = [&#34;css/custom.css&#34;]</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -632,26 +632,26 @@ While I am not new to blogging, I was re-inspired by https://www.linkedin.com/in
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="prettyprint highlight"><code data-lang="html">&lt;script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js?skin=sons-of-obsidian"&gt;&lt;/script&gt; </code></pre>
+<pre class="prettyprint highlight"><code data-lang="html">&lt;script src=&#34;https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js?skin=sons-of-obsidian&#34;&gt;&lt;/script&gt; </code></pre>
 </div>
 </div>
 </div>
 <div class="sect3">
 <h4 id="_includes">Includes</h4>
 <div class="paragraph">
-<p>By default, asciidoctor will turn included external urls into links instead of including them.  This can be overcome on the command line as <code><code>asciidoctor -a allow-uri-read myfile.adoc</code></code>.  But we aren&#8217;t using asciidoctor directly, hugo is calling it an we have no way to set the flag.  There is a creative work around, okay hack.  Create an asciidoctor bash script that adds the flag and make sure the asciidoctor bash script is first in your $PATH.</p>
+<p>By default, asciidoctor will turn included external urls into links instead of including them.  This can be overcome on the command line as <code><code>asciidoctor -a allow-uri-read myfile.adoc</code></code>.  But we aren’t using asciidoctor directly, hugo is calling it an we have no way to set the flag.  There is a creative work around, okay hack.  Create an asciidoctor bash script that adds the flag and make sure the asciidoctor bash script is first in your $PATH.</p>
 </div>
 <div class="admonitionblock caution">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-caution" title="Caution"></i>
 </td>
 <td class="content">
-This can cause a security issue.  <strong>You must really trust what you are including.</strong>  My advice is that unless you control the file being included, don&#8217;t include it.
+This can cause a security issue.  <strong>You must really trust what you are including.</strong>  My advice is that unless you control the file being included, don’t include it.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -664,26 +664,26 @@ ${HOME}/.rvm/gems/ruby-2.4.0/bin/asciidoctor -a allow-uri-read $*</code></pre>
 <div class="content">
 <pre class="prettyprint highlight linenums"><code data-lang="source">[params]
     # Custom CSS
-    custom_css = ["css/custom.css"]
+    custom_css = [&#34;css/custom.css&#34;]
 
 
-    viewMorePostLink = "/blog/"
-    author = "Jim Shingler"
-    defaultKeywords = ["jshingler", "Jim Shingler", "James Shingler", "Shingler", "Schindler", "Lean", "Agile", "devOps", "java", "Spring", "Cloud Native", "Microservices", "hugo", "go"]
-    mainSections = ["blog"]
-    defaultDescription = "Jim Shingler Blog about interestes: Professional ( lean, agile, devOps, devSecOps ), Technical ( Java, Spring, Cloud Native, Microservices ), Personal Development ( ThinkScript ), Growth, and Learning"
-    #defaultDescription = "Site template made by devcows using hugo"
+    viewMorePostLink = &#34;/blog/&#34;
+    author = &#34;Jim Shingler&#34;
+    defaultKeywords = [&#34;jshingler&#34;, &#34;Jim Shingler&#34;, &#34;James Shingler&#34;, &#34;Shingler&#34;, &#34;Schindler&#34;, &#34;Lean&#34;, &#34;Agile&#34;, &#34;devOps&#34;, &#34;java&#34;, &#34;Spring&#34;, &#34;Cloud Native&#34;, &#34;Microservices&#34;, &#34;hugo&#34;, &#34;go&#34;]
+    mainSections = [&#34;blog&#34;]
+    defaultDescription = &#34;Jim Shingler Blog about interestes: Professional ( lean, agile, devOps, devSecOps ), Technical ( Java, Spring, Cloud Native, Microservices ), Personal Development ( ThinkScript ), Growth, and Learning&#34;
+    #defaultDescription = &#34;Site template made by devcows using hugo&#34;
 
     # Social media
-    facebook_site = "" # the Facebook handle of your site ('https://www.facebook.com/HANDLE')
-    twitter_site = "GoHugoIO" # the Twitter handle of your site (without the '@')
-    default_sharing_image = "img/sharing-default.png"
+    facebook_site = &#34;&#34; # the Facebook handle of your site (&#39;https://www.facebook.com/HANDLE&#39;)
+    twitter_site = &#34;GoHugoIO&#34; # the Twitter handle of your site (without the &#39;@&#39;)
+    default_sharing_image = &#34;img/sharing-default.png&#34;
 
     # Google Maps API key (if not set will default to not passing a key.)
-    googleMapsApiKey = "AIzaSyA1N45cD4qWwsgnuE1F39p1SYaM0w0ldQg"
+    googleMapsApiKey = &#34;AIzaSyA1N45cD4qWwsgnuE1F39p1SYaM0w0ldQg&#34;
 
     # Style options: default (light-blue), blue, green, marsala, pink, red, turquoise, violet
-    style = "default"
+    style = &#34;default&#34;
 
     # Since this template is static, the contact form uses www.formspree.io as a
     # proxy. The form makes a POST request to their servers to send the actual
@@ -691,26 +691,26 @@ ${HOME}/.rvm/gems/ruby-2.4.0/bin/asciidoctor -a allow-uri-read $*</code></pre>
     #
     # What you need to do for the setup?
     #
-    # - set your email address under 'email' below
+    # - set your email address under &#39;email&#39; below
     # - upload the generated site to your server
     # - send a dummy email yourself to confirm your account
     # - click the confirm link in the email from www.formspree.io
-    # - you're done. Happy mailing!
+    # - you&#39;re done. Happy mailing!
     #
     # Enable the contact form by entering your Formspree.io email
-    email = "shinglerjim@gmail.com"
+    email = &#34;shinglerjim@gmail.com&#34;
     contact_form_ajax = false
 
-    about_us = "Always Be Learning."
-    copyright = "Copyright (c) 2015 - 2020, JShingler; all rights reserved."
+    about_us = &#34;Always Be Learning.&#34;
+    copyright = &#34;Copyright (c) 2015 - 2020, JShingler; all rights reserved.&#34;
 
-    # Format dates with Go's time formatting
-    date_format = "January 2, 2006"
+    # Format dates with Go&#39;s time formatting
+    date_format = &#34;January 2, 2006&#34;
 
-    #logo = "img/logo.png"
-    logo = "img/JShingler2.png"
-    #logo_small = "img/logo-small.png"
-    address = """&lt;p&gt;&lt;strong&gt;Jim Shingler&lt;/strong&gt;
+    #logo = &#34;img/logo.png&#34;
+    logo = &#34;img/JShingler2.png&#34;
+    #logo_small = &#34;img/logo-small.png&#34;
+    address = &#34;&#34;&#34;&lt;p&gt;&lt;strong&gt;Jim Shingler&lt;/strong&gt;
         &lt;br&gt;
         &lt;br&gt;
         &lt;br&gt;Columbus
@@ -718,22 +718,22 @@ ${HOME}/.rvm/gems/ruby-2.4.0/bin/asciidoctor -a allow-uri-read $*</code></pre>
         &lt;br&gt;
         &lt;strong&gt;USA&lt;/strong&gt;
       &lt;/p&gt;
-      """
-    latitude = "39.983334"
-    longitude = "-82.983330"
+      &#34;&#34;&#34;
+    latitude = &#34;39.983334&#34;
+    longitude = &#34;-82.983330&#34;
 
 [Permalinks]
-    blog = "/blog/:year/:month/:day/:filename/"
+    blog = &#34;/blog/:year/:month/:day/:filename/&#34;
 
 # Enable or disable top bar with social icons
 [params.topbar]
     enable = true
-    #text = """&lt;p class="hidden-sm hidden-xs"&gt;Contact us on +420 777 555 333 or hello@universal.com.&lt;/p&gt;
-    text = """&lt;p class="hidden-sm hidden-xs"&gt;&lt;/p&gt;
-      &lt;p class="hidden-md hidden-lg"&gt;&lt;a href="#" data-animate-hover="pulse"&gt;&lt;i class="fas fa-phone"&gt;&lt;/i&gt;&lt;/a&gt;
-      &lt;a href="#" data-animate-hover="pulse"&gt;&lt;i class="fas fa-envelope"&gt;&lt;/i&gt;&lt;/a&gt;
+    #text = &#34;&#34;&#34;&lt;p class=&#34;hidden-sm hidden-xs&#34;&gt;Contact us on +420 777 555 333 or hello@universal.com.&lt;/p&gt;
+    text = &#34;&#34;&#34;&lt;p class=&#34;hidden-sm hidden-xs&#34;&gt;&lt;/p&gt;
+      &lt;p class=&#34;hidden-md hidden-lg&#34;&gt;&lt;a href=&#34;#&#34; data-animate-hover=&#34;pulse&#34;&gt;&lt;i class=&#34;fas fa-phone&#34;&gt;&lt;/i&gt;&lt;/a&gt;
+      &lt;a href=&#34;#&#34; data-animate-hover=&#34;pulse&#34;&gt;&lt;i class=&#34;fas fa-envelope&#34;&gt;&lt;/i&gt;&lt;/a&gt;
       &lt;/p&gt;
-      """
+      &#34;&#34;&#34;
 
 # Enable and disable widgets for the right sidebar
 [params.widgets]
@@ -744,54 +744,54 @@ ${HOME}/.rvm/gems/ruby-2.4.0/bin/asciidoctor -a allow-uri-read $*</code></pre>
 [params.carousel]
     enable = false
     # All carousel items are defined in their own files. You can find example items
-    # at 'exampleSite/data/carousel'.
+    # at &#39;exampleSite/data/carousel&#39;.
     # For more informtion take a look at the README.
 
 [params.features]
     enable = false
     # All features are defined in their own files. You can find example items
-    # at 'exampleSite/data/features'.
+    # at &#39;exampleSite/data/features&#39;.
     # For more informtion take a look at the README.
 
 [params.testimonials]
     enable = false
     # All testimonials are defined in their own files. You can find example items
-    # at 'exampleSite/data/testimonials'.
+    # at &#39;exampleSite/data/testimonials&#39;.
     # For more informtion take a look at the README.
-    title = "Testimonials"
-    subtitle = "We have worked with many clients and we always like to hear they come out from the cooperation happy and satisfied. Have a look what our clients said about us."
+    title = &#34;Testimonials&#34;
+    subtitle = &#34;We have worked with many clients and we always like to hear they come out from the cooperation happy and satisfied. Have a look what our clients said about us.&#34;
 
 [params.see_more]
     enable = false
-    icon = "far fa-file-alt"
-    title = "Do you want to see more?"
-    subtitle = "We have prepared for you more than 40 different HTML pages, including 5 variations of homepage."
-    link_url = "#"
-    link_text = "Check other homepages"
+    icon = &#34;far fa-file-alt&#34;
+    title = &#34;Do you want to see more?&#34;
+    subtitle = &#34;We have prepared for you more than 40 different HTML pages, including 5 variations of homepage.&#34;
+    link_url = &#34;#&#34;
+    link_text = &#34;Check other homepages&#34;
 
 [params.clients]
     enable = false
     # All clients are defined in their own files. You can find example items
-    # at 'exampleSite/data/clients'.
+    # at &#39;exampleSite/data/clients&#39;.
     # For more informtion take a look at the README.
-    title = "Our Clients"
-    subtitle = ""
+    title = &#34;Our Clients&#34;
+    subtitle = &#34;&#34;
 
 [params.recent_posts]
     enable = true
-    title = "Jim Shingler blog"
-    subtitle = "Thoughts on: Technical, Professional, and Personal Development"
+    title = &#34;Jim Shingler blog&#34;
+    subtitle = &#34;Thoughts on: Technical, Professional, and Personal Development&#34;
 
 [security]
   enableInlineShortcodes = false
   [security.exec]
-    allow = ['^dart-sass-embedded$', '^go$', '^npx$', '^postcss$', '^asciidoctor$']
-    osEnv = ['(?i)^((HTTPS?|NO)_PROXY|PATH(EXT)?|APPDATA|TE?MP|TERM|GO\w+)$']
+    allow = [&#39;^dart-sass-embedded$&#39;, &#39;^go$&#39;, &#39;^npx$&#39;, &#39;^postcss$&#39;, &#39;^asciidoctor$&#39;]
+    osEnv = [&#39;(?i)^((HTTPS?|NO)_PROXY|PATH(EXT)?|APPDATA|TE?MP|TERM|GO\w+)$&#39;]
   [security.funcs]
-    getenv = ['^HUGO_', '^CI$']
+    getenv = [&#39;^HUGO_&#39;, &#39;^CI$&#39;]
   [security.http]
-    methods = ['(?i)GET|POST']
-    urls = ['.*']</code></pre>
+    methods = [&#39;(?i)GET|POST&#39;]
+    urls = [&#39;.*&#39;]</code></pre>
 </div>
 </div>
 </div>
@@ -799,11 +799,11 @@ ${HOME}/.rvm/gems/ruby-2.4.0/bin/asciidoctor -a allow-uri-read $*</code></pre>
 <div class="sect2">
 <h3 id="_publish_to_github">Publish to Github</h3>
 <div class="paragraph">
-<p>Some really good instructions from the Hugo docs on <a href="https://gohugo.io/hosting-and-deployment/hosting-on-github/#types-of-github-pages">Publishing to Github.io</a> and more information on the <a href="https://help.github.com/en/github/working-with-github-pages/about-github-pages#user&#8212;&#8203;organization-pages">github help pages</a></p>
+<p>Some really good instructions from the Hugo docs on <a href="https://gohugo.io/hosting-and-deployment/hosting-on-github/#types-of-github-pages">Publishing to Github.io</a> and more information on the <a href="https://help.github.com/en/github/working-with-github-pages/about-github-pages#user—​organization-pages">github help pages</a></p>
 </div>
 <div class="admonitionblock warning">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-warning" title="Warning"></i>
 </td>
@@ -811,7 +811,7 @@ ${HOME}/.rvm/gems/ruby-2.4.0/bin/asciidoctor -a allow-uri-read $*</code></pre>
 Github pages have <a href="https://help.github.com/en/github/working-with-github-pages/about-github-pages#usage-limits">usage limits</a>, I might have to figure out a different hosting option.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="paragraph">
 <p>I choose to use a user page <a href="https://jshingler.github.io" class="bare">https://jshingler.github.io</a>. Make sure you have created <code><code>&lt;USERNAME&gt;.github.io</code></code> (E.g. <a href="https://github.com/jshingler/jshingler.github.io" class="bare">https://github.com/jshingler/jshingler.github.io</a>) repository on the github website. This is where the static content will be published to and served from.  While it might be tempting, <strong>NEVER DIRECTLY MODIFY THE STATIC SITE</strong>, always republish from the your hugo blog repository.</p>
@@ -823,7 +823,7 @@ Github pages have <a href="https://help.github.com/en/github/working-with-github
 </div>
 </blockquote>
 <div class="attribution">
-&#8212; Charly3pins
+— Charly3pins
 </div>
 </div>
 <div class="listingblock">
@@ -832,7 +832,7 @@ Github pages have <a href="https://help.github.com/en/github/working-with-github
 </div>
 </div>
 <div class="paragraph">
-<p>Now publish the website.  Here is a slightly modified script from Charly3Pin&#8217;s blog to publish the site.</p>
+<p>Now publish the website.  Here is a slightly modified script from Charly3Pin’s blog to publish the site.</p>
 </div>
 <div class="listingblock">
 <div class="title">deploy.sh - slightly modified from Charly3Pins</div>
@@ -840,7 +840,7 @@ Github pages have <a href="https://help.github.com/en/github/working-with-github
 <pre class="prettyprint highlight linenums"><code data-lang="source">#!/bin/bash
 set -x
 
-echo -e "\033[0;32mDeploying updates to GitHub...\033[0m"
+echo -e &#34;\033[0;32mDeploying updates to GitHub...\033[0m&#34;
 
 # Remove old Stuff  <i class="conum" data-value="1"></i><b>(1)</b>
 cd public
@@ -857,11 +857,11 @@ cd public
 git add .
 
 # Commit changes.
-msg="rebuilding site `date`"
+msg=&#34;rebuilding site `date`&#34;
 if [ $# -eq 1 ]
-  then msg="$1"
+  then msg=&#34;$1&#34;
 fi
-git commit -m "$msg"
+git commit -m &#34;$msg&#34;
 
 # Push source and build repos.
 git push origin master
@@ -872,13 +872,13 @@ cd ..</code></pre>
 </div>
 <div class="colist arabic">
 <table>
-<tr>
+<tbody><tr>
 <td><i class="conum" data-value="1"></i><b>1</b></td>
 <td>If you delete something from the site, if you really want it to be delete, you need to clean out the <code><code>public</code></code> directory.</td>
 </tr>
-</table>
+</tbody></table>
 </div>
-<hr>
+<hr/>
 </div>
 </div>
 </div>
@@ -886,7 +886,7 @@ cd ..</code></pre>
 <h2 id="_additional_steps">Additional Steps</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>That is pretty well it.  I now have a functional blog published to github.io.  I won&#8217;t go into the details, here are some additional steps I performed, most of which where in the <code><code>config.toml</code></code> file</p>
+<p>That is pretty well it.  I now have a functional blog published to github.io.  I won’t go into the details, here are some additional steps I performed, most of which where in the <code><code>config.toml</code></code> file</p>
 </div>
 <div class="ulist">
 <ul>
@@ -910,13 +910,13 @@ cd ..</code></pre>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_whats_next">What&#8217;s Next</h2>
+<h2 id="_whats_next">What’s Next</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>René at his <a href="https://rgielen.net/about/">blog</a> has a pretty good article about
 <a href="https://rgielen.net/posts/2019/creating-a-dockerized-hugo-asciidoctor-toolchain/">Creating a Dockerized Hugo + AsciiDoctor Toolchain</a>.  Next, I am thinking about using this with <a href="https://help.github.com/en/actions">GitHub worksflows and actions</a> to that when I push a change to the master branch of my repository, the website is automatically rebuilt and published.</p>
 </div>
-<hr>
+<hr/>
 </div>
 </div>
 <div class="sect1">
@@ -974,7 +974,7 @@ cd ..</code></pre>
                         <div id="comments">
                             <div id="disqus_thread"></div>
 <script type="application/javascript">
-    var disqus_config = function () {
+    window.disqus_config = function () {
     
     
     
@@ -1044,7 +1044,7 @@ cd ..</code></pre>
             
             
             <li>
-                <a href="/categories/cloud">cloud (1)</a>
+                <a href="/categories/cloud">cloud (2)</a>
             </li>
             
             <li>
@@ -1077,6 +1077,10 @@ cd ..</code></pre>
             
             <li>
                 <a href="/categories/starting">starting (1)</a>
+            </li>
+            
+            <li>
+                <a href="/categories/thinking">thinking (1)</a>
             </li>
             
         </ul>
@@ -1174,6 +1178,10 @@ cd ..</code></pre>
             </li>
             
             <li>
+                <a href="/tags/value-line"><i class="fas fa-tags"></i> value-line</a>
+            </li>
+            
+            <li>
                 <a href="/tags/xaas"><i class="fas fa-tags"></i> xaas</a>
             </li>
             
@@ -1226,6 +1234,19 @@ cd ..</code></pre>
                 
                 <div class="item same-height-row clearfix">
                     <div class="image same-height-always">
+                        <a href="https://jshingler.github.io/blog/2023/04/01/valueline/">
+                          
+                            <img src="/img/blog/ValueLine/ValueLine.png" class="img-responsive" alt="Value Line">
+                          
+                        </a>
+                    </div>
+                    <div class="name same-height-always">
+                        <h5><a href="https://jshingler.github.io/blog/2023/04/01/valueline/">Value Line</a></h5>
+                    </div>
+                </div>
+                
+                <div class="item same-height-row clearfix">
+                    <div class="image same-height-always">
                         <a href="https://jshingler.github.io/blog/2022/03/05/xaas/">
                           
                             <img src="/img/blog/XaaS/xaas.png" class="img-responsive" alt="XaaS">
@@ -1247,19 +1268,6 @@ cd ..</code></pre>
                     </div>
                     <div class="name same-height-always">
                         <h5><a href="https://jshingler.github.io/blog/2021/10/30/personal-knowledge-system/">Personal Knowledge System</a></h5>
-                    </div>
-                </div>
-                
-                <div class="item same-height-row clearfix">
-                    <div class="image same-height-always">
-                        <a href="https://jshingler.github.io/blog/2021/01/31/obs-virtual-cables/">
-                          
-                            <img src="/img/blog/obs-virtual-cables/OBS.png" class="img-responsive" alt="Obs Virtual Cables">
-                          
-                        </a>
-                    </div>
-                    <div class="name same-height-always">
-                        <h5><a href="https://jshingler.github.io/blog/2021/01/31/obs-virtual-cables/">Obs Virtual Cables</a></h5>
                     </div>
                 </div>
                 
@@ -1332,7 +1340,6 @@ if (!doNotTrack) {
 	ga('send', 'pageview');
 }
 </script>
-
 <script src="//code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
