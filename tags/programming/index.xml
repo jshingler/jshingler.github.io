@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>programming on Jim Shingler Blog</title>
+    <link>https://jshingler.github.io/tags/programming/</link>
+    <description>Recent content in programming on Jim Shingler Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 05 Mar 2022 20:29:20 -0500</lastBuildDate><atom:link href="https://jshingler.github.io/tags/programming/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>XaaS</title>
+      <link>https://jshingler.github.io/blog/2022/03/05/xaas/</link>
+      <pubDate>Sat, 05 Mar 2022 20:29:20 -0500</pubDate>
+      
+      <guid>https://jshingler.github.io/blog/2022/03/05/xaas/</guid>
+      <description>1. Abstract Cloud offers a variety of solutions and approaches: IaaS, CaaS, PaaS, FaaS, and SaaS. It isn’t always clear which solutions and approaches are appropriate. The purpose of this paper is to clarify the approaches, their implications, appropriate usage, and confirm Intents.
+I am trying something new. I am going write this blog post in the open. I will start writing my thoughts and ideas, and you will be able to see and comment on the blog as it is developed.</description>
+    </item>
+    
+    <item>
+      <title>Creating This Site</title>
+      <link>https://jshingler.github.io/blog/2019/12/07/creating-this-site/</link>
+      <pubDate>Sat, 07 Dec 2019 13:46:46 -0500</pubDate>
+      
+      <guid>https://jshingler.github.io/blog/2019/12/07/creating-this-site/</guid>
+      <description>While I am not new to blogging, I was re-inspired by Sasi Peri, a coworker, and her new blog. This gave me the itch to share my experiences and information with hope of helping others..
+Now that I was re-inspired to blog, I had a fortunate conversation with Drew Heintz. Drew is a bright young man finishing up his Computer Science and Security degrees from RIT. Drew, shared with me that he did his resume using Hugo.</description>
+    </item>
+    
+    <item>
+      <title>Linked post</title>
+      <link>https://jshingler.github.io/blog/2015/10/02/linked-post/</link>
+      <pubDate>Fri, 02 Oct 2015 21:49:20 +0200</pubDate>
+      
+      <guid>https://jshingler.github.io/blog/2015/10/02/linked-post/</guid>
+      <description>I&amp;rsquo;m a linked post in the menu. You can add other posts by adding the following line to the frontmatter:
+menu = &amp;quot;main&amp;quot; Lorem ipsum dolor sit amet, consectetur adipiscing elit. In mauris nulla, vestibulum vel auctor sed, posuere eu lorem. Aliquam consequat augue ut accumsan mollis. Suspendisse malesuada sodales tincidunt. Vivamus sed erat ac augue bibendum porta sed id ipsum. Ut mollis mauris eget ligula sagittis cursus. Aliquam id pharetra tellus.</description>
+    </item>
+    
+  </channel>
+</rss>

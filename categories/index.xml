@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on Jim Shingler Blog</title>
+    <link>https://jshingler.github.io/categories/</link>
+    <description>Recent content in Categories on Jim Shingler Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 01 Apr 2023 12:37:26 -0400</lastBuildDate><atom:link href="https://jshingler.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Cloud</title>
+      <link>https://jshingler.github.io/categories/cloud/</link>
+      <pubDate>Sat, 01 Apr 2023 12:37:26 -0400</pubDate>
+      
+      <guid>https://jshingler.github.io/categories/cloud/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Thinking</title>
+      <link>https://jshingler.github.io/categories/thinking/</link>
+      <pubDate>Sat, 01 Apr 2023 12:37:26 -0400</pubDate>
+      
+      <guid>https://jshingler.github.io/categories/thinking/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>General</title>
+      <link>https://jshingler.github.io/categories/general/</link>
+      <pubDate>Sat, 30 Oct 2021 20:11:37 -0400</pubDate>
+      
+      <guid>https://jshingler.github.io/categories/general/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>OBS</title>
+      <link>https://jshingler.github.io/categories/obs/</link>
+      <pubDate>Sun, 31 Jan 2021 21:28:30 -0500</pubDate>
+      
+      <guid>https://jshingler.github.io/categories/obs/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>programming</title>
+      <link>https://jshingler.github.io/categories/programming/</link>
+      <pubDate>Mon, 23 Dec 2019 13:21:13 -0500</pubDate>
+      
+      <guid>https://jshingler.github.io/categories/programming/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>presentations</title>
+      <link>https://jshingler.github.io/categories/presentations/</link>
+      <pubDate>Sun, 08 Dec 2019 22:23:24 -0500</pubDate>
+      
+      <guid>https://jshingler.github.io/categories/presentations/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>devOps</title>
+      <link>https://jshingler.github.io/categories/devops/</link>
+      <pubDate>Sat, 15 Sep 2018 17:20:49 -0500</pubDate>
+      
+      <guid>https://jshingler.github.io/categories/devops/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>lorem</title>
+      <link>https://jshingler.github.io/categories/lorem/</link>
+      <pubDate>Sat, 10 Oct 2015 13:07:31 +0200</pubDate>
+      
+      <guid>https://jshingler.github.io/categories/lorem/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>pseudo</title>
+      <link>https://jshingler.github.io/categories/pseudo/</link>
+      <pubDate>Mon, 03 Aug 2015 13:39:46 +0200</pubDate>
+      
+      <guid>https://jshingler.github.io/categories/pseudo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>starting</title>
+      <link>https://jshingler.github.io/categories/starting/</link>
+      <pubDate>Wed, 24 Jun 2015 13:50:46 +0200</pubDate>
+      
+      <guid>https://jshingler.github.io/categories/starting/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

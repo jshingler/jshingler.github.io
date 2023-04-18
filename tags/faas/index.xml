@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>FaaS on Jim Shingler Blog</title>
+    <link>https://jshingler.github.io/tags/faas/</link>
+    <description>Recent content in FaaS on Jim Shingler Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 05 Mar 2022 20:29:20 -0500</lastBuildDate><atom:link href="https://jshingler.github.io/tags/faas/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>XaaS</title>
+      <link>https://jshingler.github.io/blog/2022/03/05/xaas/</link>
+      <pubDate>Sat, 05 Mar 2022 20:29:20 -0500</pubDate>
+      
+      <guid>https://jshingler.github.io/blog/2022/03/05/xaas/</guid>
+      <description>1. Abstract Cloud offers a variety of solutions and approaches: IaaS, CaaS, PaaS, FaaS, and SaaS. It isn’t always clear which solutions and approaches are appropriate. The purpose of this paper is to clarify the approaches, their implications, appropriate usage, and confirm Intents.
+I am trying something new. I am going write this blog post in the open. I will start writing my thoughts and ideas, and you will be able to see and comment on the blog as it is developed.</description>
+    </item>
+    
+  </channel>
+</rss>

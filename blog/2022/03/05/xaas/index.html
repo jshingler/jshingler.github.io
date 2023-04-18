@@ -1,0 +1,1556 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <head>
+  <meta charset="utf-8">
+  <meta name="robots" content="all,follow">
+  <meta name="googlebot" content="index,follow,snippet,archive">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <title>XaaS</title>
+  <meta name="author" content="Jim Shingler" />
+  
+  
+  
+  
+  <meta name="keywords" content="jshingler, Jim Shingler, James Shingler, Shingler, Schindler, Lean, Agile, devOps, java, Spring, Cloud Native, Microservices, hugo, go, Cloud, XaaS, IaaS, CaaS, PaaS, FaaS, Saas, programming">
+  
+  
+  <meta name="description" content="What is XaaS?">
+
+  <meta name="generator" content="Hugo 0.111.3">
+
+  
+
+
+<link rel="stylesheet" href="https://jshingler.github.io/css/custom.css">
+
+
+
+  
+  <link href='//fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,500,700,800' rel='stylesheet' type='text/css'>
+
+  
+  <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.11.2/css/all.css">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+  
+  <link href="/css/animate.css" rel="stylesheet">
+
+  
+  
+    <link href="/css/style.default.css" rel="stylesheet" id="theme-stylesheet">
+  
+
+  
+  <link href="/css/custom.css" rel="stylesheet">
+
+  
+  
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  
+
+  
+  <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" href="/img/apple-touch-icon.png" />
+
+  
+  <link href="/css/owl.carousel.css" rel="stylesheet">
+  <link href="/css/owl.theme.css" rel="stylesheet">
+
+  
+  <link rel="alternate" href="https://jshingler.github.io/index.xml" type="application/rss+xml" title="Jim Shingler Blog">
+
+  
+  
+  
+  
+  
+  
+  
+  <meta property="og:locale" content="en_us">
+  <meta property="og:site_name" content="Jim Shingler Blog">
+  <meta property="og:title" content="XaaS">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://jshingler.github.io/blog/2022/03/05/xaas/" />
+  <meta property="og:description" content="What is XaaS?">
+  <meta property="og:image" content="https://jshingler.github.io/img/blog/XaaS/xaas.png">
+  <meta property="og:image:type" content="image/png">
+  
+  
+  
+    <meta property="og:image:width" content="1123">
+    <meta property="og:image:height" content="677">
+  
+  
+  <meta property="og:updated_time" content="2022-03-05T20:29:20-0500">
+  
+    
+    
+    <meta property="article:section" content="Cloud">
+    <meta property="article:tag" content="Cloud">
+    <meta property="article:tag" content="XaaS">
+    <meta property="article:tag" content="IaaS">
+    <meta property="article:tag" content="CaaS">
+    <meta property="article:tag" content="PaaS">
+    <meta property="article:tag" content="FaaS">
+    <meta property="article:tag" content="Saas">
+    <meta property="article:tag" content="programming">
+    
+    
+    <meta property="article:published_time" content="2022-03-05T20:29:20-0500">
+    <meta property="article:modified_time" content="2022-03-05T20:29:20-0500">
+  
+
+  
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@GoHugoIO">
+  <meta name="twitter:title" content="XaaS">
+  
+  <meta name="twitter:image" content="https://jshingler.github.io/img/blog/XaaS/xaas.png">
+  
+  <meta name="twitter:description" content="What is XaaS?">
+  
+
+</head>
+
+
+  <body>
+
+    <div id="all">
+
+        <header>
+
+          <div class="navbar-affixed-top" data-spy="affix" data-offset-top="200">
+
+    <div class="navbar navbar-default yamm" role="navigation" id="navbar">
+
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand home" href="/">
+                    <img src="/img/JShingler2.png" alt="XaaS logo" class="hidden-xs hidden-sm">
+                    <img src="/" alt="XaaS logo" class="visible-xs visible-sm">
+                    <span class="sr-only">XaaS - go to homepage</span>
+                </a>
+                <div class="navbar-buttons">
+                    <button type="button" class="navbar-toggle btn-template-main" data-toggle="collapse" data-target="#navigation">
+                      <span class="sr-only">Toggle Navigation</span>
+                        <i class="fas fa-align-justify"></i>
+                    </button>
+                </div>
+            </div>
+            
+
+            <div class="navbar-collapse collapse" id="navigation">
+                <ul class="nav navbar-nav navbar-right">
+                  
+                  
+                  
+                  <li class="dropdown">
+                    
+                    <a href="/">Home</a>
+                    
+                  </li>
+                  
+                  
+                  <li class="dropdown active">
+                    
+                    <a href="/blog/">Blog</a>
+                    
+                  </li>
+                  
+                  
+                  <li class="dropdown">
+                    
+                    <a href="/presentations/">Presentations</a>
+                    
+                  </li>
+                  
+                  
+                  <li class="dropdown">
+                    
+                    <a href="/faq/">FAQ</a>
+                    
+                  </li>
+                  
+                  
+                  <li class="dropdown">
+                    
+                    <a href="/contact/">Contact</a>
+                    
+                  </li>
+                  
+                </ul>
+            </div>
+            
+
+            <div class="collapse clearfix" id="search">
+
+                <form class="navbar-form" role="search">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search">
+                        <span class="input-group-btn">
+
+                    <button type="submit" class="btn btn-template-main"><i class="fas fa-search"></i></button>
+
+                </span>
+                    </div>
+                </form>
+
+            </div>
+            
+
+        </div>
+    </div>
+    
+
+</div>
+
+
+
+
+        </header>
+
+        <div id="heading-breadcrumbs">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1>XaaS</h1>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+        <div id="content">
+            <div class="container">
+
+                <div class="row">
+
+                    
+
+                    <div class="col-md-9" id="blog-post">
+
+                        <p class="text-muted text-uppercase mb-small text-right">By <a href="#">Jim Shingler</a> | March 5, 2022</p>
+
+                        <div id="post-content">
+                          <div class="sect1">
+<h2 id="_abstract"><a class="anchor" href="#_abstract"></a><a class="link" href="#_abstract">1. Abstract</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Cloud offers a variety of solutions and approaches: <strong>IaaS, CaaS, PaaS, FaaS, and SaaS</strong>.
+It isn’t always clear which solutions and approaches are appropriate. The purpose of this paper is to clarify the approaches, their implications, appropriate usage, and confirm Intents.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tbody><tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+I am trying something new.  I am going write this blog post in the open.  I will start writing my thoughts and ideas, and you will be able to see and comment on the blog as it is developed.  Your thoughts and questions will help me to improve the this post.
+</td>
+</tr>
+</tbody></table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_problem_statement"><a class="anchor" href="#_problem_statement"></a><a class="link" href="#_problem_statement">2. Problem Statement</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>IT Solutions:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Business IT</p>
+</li>
+<li>
+<p>Custom Dev</p>
+</li>
+<li>
+<p>Cloud Native microservices</p>
+</li>
+<li>
+<p>Legacy tightly coupled monoliths</p>
+</li>
+<li>
+<p>Large scale Commercial Off The Shelf (COTS)</p>
+<div class="ulist">
+<ul>
+<li>
+<p>SAP</p>
+</li>
+<li>
+<p>SalesForce</p>
+</li>
+<li>
+<p>Manhattan</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tbody><tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+A clear direction and guide rails with reference architecture and implementations are required to avoid confusion, resolve competing direction and help the development teams move forward.
+</td>
+</tr>
+</tbody></table>
+</div>
+<div class="paragraph">
+<p>How do you continue the movement to the cloud?</p>
+</div>
+<div class="paragraph">
+<p>Factors to be considered:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Organizational Change Management</p>
+</li>
+<li>
+<p>Security</p>
+</li>
+<li>
+<p>Flexibility</p>
+</li>
+<li>
+<p>Velocity (Speed)</p>
+</li>
+<li>
+<p>Cost</p>
+</li>
+<li>
+<p>Staffing</p>
+</li>
+<li>
+<p>Skills Uplift</p>
+</li>
+<li>
+<p>Business Partners and Contracts</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_background"><a class="anchor" href="#_background"></a><a class="link" href="#_background">3. Background</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Many companies have embarked on a Cloud Journey with the goal of moving as much compute to the cloud as possible. Your Company may be using  Amazon (AWS), Google (GCP), Microsoft (Azure), or multiple clouds.
+Frequently, the cloud journey is initiated with an Infrastructure as a Service (IaaS).</p>
+</div>
+<div class="paragraph">
+<p>With the goal of simplicity and velocity, typically expands into Container as a Service (CaaS) approach using Docker, Kubernetes or some other Container Management solution. Around 2015,  Platform as a Service (PaaS) was introduced. VMWare Tanzu (Pivotal Cloud Foundry - PCF) is a leanding PaaS solution.</p>
+</div>
+<div class="paragraph">
+<p>With the goal of shutting down Traditional OnPrem Data Centers, Your company may start a  &#34;Lift and Shift&#34; of Virtual Machines in Data Centers to Cloud based IaaS.
+Your Company’s usage of the cloud to date has largely been Infrastructure as a Service (IaaS), Cloud Services, and Software as a Service (SaaS).</p>
+</div>
+<div class="paragraph">
+<p><strong>Definitions:</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="#_traditional_onprem">Traditional On Prem</a></p>
+</li>
+<li>
+<p><a href="#_iaas_infrastructure_as_a_service">IaaS - Infrastructure as a Service</a></p>
+</li>
+<li>
+<p><a href="#_caas_container_as_a_service">CaaS - Container as a Service</a></p>
+</li>
+<li>
+<p><a href="#_paas_platform_as_a_service">PaaS - Platform as a Service</a></p>
+</li>
+<li>
+<p><a href="#_faas_function_as_a_service_serverless">FaaS - Function as a Service (Serverless)</a></p>
+</li>
+<li>
+<p><a href="#_saas_software_as_a_service">SaaS - Software as a Service</a></p>
+</li>
+</ul>
+</div>
+<div class="sect2">
+<h3 id="_traditional_onprem"><a class="anchor" href="#_traditional_onprem"></a><a class="link" href="#_traditional_onprem">3.1. Traditional OnPrem</a></h3>
+<div class="paragraph">
+<p>Traditional On Premise computing requires the company to take responsibility
+for sizing, acquiring, securing, and configuration of the Infrastructure (Servers, Networking Gear, and Physical Space). Once configured, the company is responsible for Operating the Infrastructure (Patching, Monitoring, Alerting, High Availability, Backup and Recovery, …​)</p>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tbody><tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+While not the subject of this paper, an important consideration is the Total Cost of Ownership, Large initial cash outlay, and the OPEX VS CAPEX implications.
+</td>
+</tr>
+</tbody></table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_iaas_infrastructure_as_a_service"><a class="anchor" href="#_iaas_infrastructure_as_a_service"></a><a class="link" href="#_iaas_infrastructure_as_a_service">3.2. IaaS - Infrastructure as a Service</a></h3>
+<div class="paragraph">
+<p>A cloud computing service that provides a basic computing platform, typically the hardware and virtual machine (VM) infrastructure (no operating system) or the hardware and an operating system. <sup class="footnote" id="_footnote_iaas">[<a id="_footnoteref_1" class="footnote" href="#_footnotedef_1" title="View footnote.">1</a>]</sup></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://aws.amazon.com/">AWS Amazon</a></p>
+</li>
+<li>
+<p><a href="https://cloud.google.com/">GCP Google Cloud</a></p>
+</li>
+<li>
+<p><a href="https://azure.microsoft.com/en-us/">Azure Microsoft</a></p>
+</li>
+<li>
+<p>…​</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_caas_container_as_a_service"><a class="anchor" href="#_caas_container_as_a_service"></a><a class="link" href="#_caas_container_as_a_service">3.3. CaaS - Container as a Service</a></h3>
+<div class="paragraph">
+<p>Containers as a service (CaaS) is a cloud service model that allows users to manage and deploy containers, applications and clusters through container-based virtualization. CaaS is highly useful to IT departments and developers in
+building secure and scalable containerized applications. With CaaS, this can be achieved using on-premises data centers or over the cloud.</p>
+</div>
+<div class="paragraph">
+<p>CaaS provides an easy way to set up a container cluster. Orchestration, which essentially automates key IT functions, is an essential quality of CaaS
+technology. Google Kubernetes, Docker Swarm, Rackspace Carina and Apache Mesos are all examples of CaaS orchestration platforms. Some public cloud CaaS
+providers include Google, Amazon Web Services (AWS), Rackspace and IBM.</p>
+</div>
+<div class="paragraph">
+<p>CaaS is often considered to be a subset of IaaS (infrastructure as a service), but includes containers as its fundamental resource, as opposed to bare metal systems and virtual machines. <sup class="footnote" id="_footnote_caas">[<a id="_footnoteref_2" class="footnote" href="#_footnotedef_2" title="View footnote.">2</a>]</sup></p>
+</div>
+<div class="paragraph">
+<p>Containers:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://www.docker.com/resources/what-container"><strong>Docker</strong></a></p>
+</li>
+<li>
+<p><a href="https://coreos.com/rkt/">Rocket</a></p>
+</li>
+<li>
+<p><a href="https://cri-o.io/">CRI-O</a></p>
+</li>
+<li>
+<p>…​</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Container Orchestration:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://docs.docker.com/engine/swarm/">Docker Swarm</a></p>
+</li>
+<li>
+<p><a href="https://mesosphere.com/">Mesosphere</a></p>
+</li>
+<li>
+<p><a href="https://kubernetes.io/"><strong>Kubernetes</strong></a></p>
+</li>
+<li>
+<p>…​</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_paas_platform_as_a_service"><a class="anchor" href="#_paas_platform_as_a_service"></a><a class="link" href="#_paas_platform_as_a_service">3.4. PaaS - Platform as a Service</a></h3>
+<div class="paragraph">
+<p>A cloud computing service that provides a comprehensive computing environment. PaaS includes the hardware, operating system, database and other necessary software for the execution of applications. It may include a complete
+development environment as well. PaaS is a step up from &#34;infrastructure as a service&#34; (IaaS), which provides only the servers and operating systems. <sup class="footnote" id="_footnote_paas">[<a id="_footnoteref_3" class="footnote" href="#_footnotedef_3" title="View footnote.">3</a>]</sup></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://www.cloudfoundry.org/">Cloud Foundry</a></p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://tanzu.vmware.com/tanzu">VMWare Tanzu(Pivotal Cloud Foundry)</a></p>
+</li>
+<li>
+<p><a href="https://www.ibm.com/cloud/cloud-foundry">IBM (BlueMix)</a></p>
+</li>
+<li>
+<p><a href="https://www.ge.com/digital/iiot-platform">GE Predix</a></p>
+</li>
+<li>
+<p><a href="https://cloudplatform.sap.com/index.html">SAP Cloud Platform</a></p>
+</li>
+<li>
+<p><a href="https://cloud.gov/">Cloud.gov</a></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><a href="https://www.heroku.com/">Heroku</a></p>
+</li>
+<li>
+<p><a href="https://www.oracle.com/cloud/">Oracle Cloud</a></p>
+</li>
+<li>
+<p><a href="https://www.outsystems.com/p/schedule-demo/">OutSystems</a></p>
+</li>
+<li>
+<p><a href="https://www.mendix.com/">Mendix</a></p>
+</li>
+<li>
+<p><a href="https://www.engineyard.com/">Engine Yard</a></p>
+</li>
+<li>
+<p><a href="https://cloud.google.com/appengine">Google App Engine</a></p>
+</li>
+<li>
+<p>…​</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_faas_function_as_a_service_serverless"><a class="anchor" href="#_faas_function_as_a_service_serverless"></a><a class="link" href="#_faas_function_as_a_service_serverless">3.5. FaaS - Function as a Service (Serverless)</a></h3>
+<div class="paragraph">
+<p>A cloud computing service in which the customer pays for each function executed rather than a full server or part of a server (a virtual machine) that may be
+idle periodically. For example, the time required to execute the code that updates a record in a database would be charged to the serverless computing customer.
+Servers are indeed used, but the term implies &#34;function as a service&#34; (FaaS) rather than &#34;infrastructure as a service&#34; (see IaaS) or &#34;platform as a service&#34; (see PaaS). <sup class="footnote" id="_footnote_faas">[<a id="_footnoteref_4" class="footnote" href="#_footnotedef_4" title="View footnote.">4</a>]</sup></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>AWS Lambda</p>
+</li>
+<li>
+<p>Google Cloud Functions</p>
+</li>
+<li>
+<p>Google Serverless</p>
+</li>
+<li>
+<p>Microsoft Azure Functions</p>
+</li>
+<li>
+<p>IBM Openwhisk</p>
+</li>
+<li>
+<p>KNative</p>
+</li>
+<li>
+<p>…​</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_saas_software_as_a_service"><a class="anchor" href="#_saas_software_as_a_service"></a><a class="link" href="#_saas_software_as_a_service">3.6. SaaS - Software as a Service</a></h3>
+<div class="paragraph">
+<p>Software that is rented rather than purchased. Instead of buying applications and paying for periodic upgrades, SaaS is subscription based, and upgrades are automatic during the subscription period. When that expires, the software is no longer valid. Ideal for Cloud Computing SaaS can be implemented with local applications that expire after a certain time, but it is ideally suited for cloud computing and applications that run in any desktop or mobile device, no matter the OS. In this model, the applications are maintained in the provider’s datacenter, and every time users launch their browsers or apps and log on, they get the latest version. In addition, user data can also be stored in the cloud. <sup class="footnote" id="_footnote_saas">[<a id="_footnoteref_5" class="footnote" href="#_footnotedef_5" title="View footnote.">5</a>]</sup></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://github.com">GitHub</a></p>
+</li>
+<li>
+<p><a href="https://gitlab.com">GitLab</a></p>
+</li>
+<li>
+<p><a href="https://www.workday.com/">Workday</a></p>
+</li>
+<li>
+<p><a href="https://www.servicenow.com/">ServiceNow</a></p>
+</li>
+<li>
+<p><a href="https://www.salesforce.com/">SalesForce</a></p>
+</li>
+<li>
+<p><a href="https://www.office.com/">Office 365</a></p>
+</li>
+<li>
+<p><a href="https://www.sap.com/index.html">SAP</a></p>
+</li>
+<li>
+<p>…​</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_why_has_been_answered"><a class="anchor" href="#_why_has_been_answered"></a><a class="link" href="#_why_has_been_answered">4. Why has been Answered</a></h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Speed to Market</p>
+</li>
+<li>
+<p>Speed to Revenue</p>
+</li>
+<li>
+<p>Accelerate Development velocity</p>
+</li>
+<li>
+<p>Reduce Operational Overhead</p>
+</li>
+<li>
+<p>Eliminate Infrastructure Bottlenecks (Self Service)</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_what_and_how"><a class="anchor" href="#_what_and_how"></a><a class="link" href="#_what_and_how">5. What and How</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The goal of this section is to examine the characteristics and implications of each aaS.</p>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tbody><tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+Traditional OnPrem will not be addressed in this post.
+</td>
+</tr>
+</tbody></table>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../../../../../img/blog/XaaS/xaas.png" alt="XaaS"/>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_iaas"><a class="anchor" href="#_iaas"></a><a class="link" href="#_iaas">5.1. IaaS</a></h3>
+<div class="paragraph">
+<p>IaaS can be thought of as running solutions in the cloud providers data center instead of our datacenter. The primary benefits are the near infinity ability to scale quickly.</p>
+</div>
+<div class="paragraph">
+<p><strong>Benefits:</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Scalability</p>
+</li>
+<li>
+<p>Flexibility</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>Workloads:</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Virtual Machines</p>
+</li>
+<li>
+<p>Database Server</p>
+</li>
+<li>
+<p>Middleware</p>
+</li>
+<li>
+<p>Uncontainerized Commercial Of The Shelf products</p>
+</li>
+<li>
+<p>Uncontainerized Legacy Monoliths</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>Implications:</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Very little process improvements without additional efforts</p>
+</li>
+<li>
+<p>Automation and Consistency require additional efforts</p>
+</li>
+<li>
+<p>Skills Uplift:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Cloud Vendor Specific tooling and processes</p>
+</li>
+<li>
+<p>Automation tooling</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Additional supporting efforts required for success</p>
+</li>
+<li>
+<p>Minimal Application impacts (Our VMs vs Cloud Provider VMs)</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_caas"><a class="anchor" href="#_caas"></a><a class="link" href="#_caas">5.2. CaaS</a></h3>
+<div class="paragraph">
+<p>CaaS is the next level of Virtualization. Virtual machines have complete copies of an operating system and run on a hypervisor. Virtual Machines use significantly more resources compared to Container Technology. Containers share an underlying OS Kernal and contain only the minimum additional components. Containers are typically much lighter weight and faster compared to virtual machines,</p>
+</div>
+<div class="paragraph">
+<p><strong>Benefits:</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Scalability</p>
+</li>
+<li>
+<p>Flexibility</p>
+</li>
+<li>
+<p>Resource Usage</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>Workloads:</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Containerized Legacy Monoliths</p>
+</li>
+<li>
+<p>Commercial Products</p>
+</li>
+<li>
+<p>If not already containerized will they?</p>
+</li>
+<li>
+<p>Open Source Products
+If not should we containerize it, do we want to contribute to the product?</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Redis</p>
+</li>
+<li>
+<p>Kafka</p>
+</li>
+<li>
+<p>Rabbit MQ</p>
+</li>
+<li>
+<p>DevSecOps Tools:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Concourse / Jenkins / Github Actions  / GitLab</p>
+</li>
+<li>
+<p>Binary Repo (Nexus) Container Repo (Harbor, Clair) SonarQube</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>Implications:</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Very little process improvements without additional efforts</p>
+</li>
+<li>
+<p>Automation and Consistency require additional efforts</p>
+</li>
+<li>
+<p>Skills Uplift: (Development and Platform Teams)</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Cloud Vendor Specific tooling and processes</p>
+</li>
+<li>
+<p>Automation tooling</p>
+</li>
+<li>
+<p>Container Technology (Docker)</p>
+</li>
+<li>
+<p>Container Specification and Orchestration Technology (Kubernetes)</p>
+</li>
+<li>
+<p>Network (Development Team)</p>
+</li>
+<li>
+<p>Security (Development Team)</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Additional supporting efforts required for success</p>
+</li>
+<li>
+<p>Roles and Responsibility Clarification</p>
+</li>
+<li>
+<p>What is Development Teams Responsibility?</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_paas"><a class="anchor" href="#_paas"></a><a class="link" href="#_paas">5.3. PaaS</a></h3>
+<div class="paragraph">
+<p>PaaS is an opinionated Application Infrastructure Framework that enable Development Speed. While opinionated, PaaS is still relatively flexible.</p>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tbody><tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+Not all PaaSs are equal. PaaSs offer a variety of capabilities and restrictions. For Example: VMWare Tanzu (Pivotal Cloud Foundry - PCF) offers additional value added capabilites overy Open Source Cloud Foundry.
+</td>
+</tr>
+</tbody></table>
+</div>
+<div class="paragraph">
+<p><strong>Benefits:</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Developer Experience and Effectiveness</p>
+</li>
+<li>
+<p>Very low barrier of development entry</p>
+</li>
+<li>
+<p>Development isn’t required to learn Networking and Infrastructure</p>
+</li>
+<li>
+<p>Scalability</p>
+</li>
+<li>
+<p>Self-Service</p>
+</li>
+<li>
+<p>Easy to use</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>Workloads:</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Customer Development Business Services</p>
+</li>
+<li>
+<p>Web Frontends</p>
+</li>
+<li>
+<p>Batch</p>
+</li>
+<li>
+<p>Event Processing</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>Implications:</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Cloud Foundry may have additional Licensing Costs</p>
+</li>
+<li>
+<p>Lends itself to Automation, Consistency, and DevSecOps</p>
+</li>
+<li>
+<p>Skills Uplift is relatively easy and focuses on Cloud Native Implementation</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_faas"><a class="anchor" href="#_faas"></a><a class="link" href="#_faas">5.4. FaaS</a></h3>
+<div class="paragraph">
+<p>FaaS is the Newest of the &#34;aaS&#34; solutions. FaaS further extends the capabilities and benefits of PaaS.</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tbody><tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+Additional Research and Monitoring recommended. KNative while still young shows a great degree of promise.
+</td>
+</tr>
+</tbody></table>
+</div>
+<div class="paragraph">
+<p><strong>Benefits:</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>TBD</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>Workloads:</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>TBD</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>Implications:</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Many of the current FaaS solutions are vendor specific and cause vendor coupling.</p>
+</li>
+<li>
+<p>TBD</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_saas"><a class="anchor" href="#_saas"></a><a class="link" href="#_saas">5.5. SaaS</a></h3>
+<div class="paragraph">
+<p>SaaS evolved out of Application Service Providers and is the most mature and well known of the &#34;aaS&#34;s.</p>
+</div>
+<div class="paragraph">
+<p><strong>Benefits:</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Operations handled by Vendor</p>
+</li>
+<li>
+<p>Standardize Solutions</p>
+</li>
+<li>
+<p>Minimal Investment of Time and Money</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>Workloads:</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Anything NOT the Business Secret Sauce.</p>
+</li>
+<li>
+<p>Context Business Needs <sup class="footnote" id="_footnote_ContextBusinessNeeds">[<a id="_footnoteref_6" class="footnote" href="#_footnotedef_6" title="View footnote.">6</a>]</sup></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>Implications:</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Maybe completely Outsource</p>
+</li>
+<li>
+<p>Dont Generate Revenue</p>
+</li>
+<li>
+<p>Easily Replaced</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_where_should_i_run_my_application"><a class="anchor" href="#_where_should_i_run_my_application"></a><a class="link" href="#_where_should_i_run_my_application">5.6. Where should I run my application</a></h3>
+<div class="paragraph">
+<p>The below represents, at a high level, where an application should run in the cloud.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tbody><tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Work in progress
+</td>
+</tr>
+</tbody></table>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../../../../../img/blog/XaaS/run-dt.png" alt="run dt" width="638" height="1073"/>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tbody><tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The above diagram is adapted from prior work by <a href="https://www.linkedin.com/in/douglas-hoke-797b3b9/">Doug Hoke</a>
+</td>
+</tr>
+</tbody></table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_when_to_caas_containerize"><a class="anchor" href="#_when_to_caas_containerize"></a><a class="link" href="#_when_to_caas_containerize">5.7. When to CaaS Containerize</a></h3>
+<div class="paragraph">
+<p>Containers are the preferred approach for making application deployment and Dev/Ops fundamental to all applications and their teams. There are things to take into account when making your decision to modify your application to run in a container. Provided below is a decision tree to help with making this determination.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tbody><tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Work in progress
+</td>
+</tr>
+</tbody></table>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../../../../../img/blog/XaaS/when-caas.png" alt="when caas" width="666" height="1557"/>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tbody><tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The above diagram is adapted from prior work by <a href="https://www.linkedin.com/in/douglas-hoke-797b3b9/">Doug Hoke</a>
+</td>
+</tr>
+</tbody></table>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_additional_considerations"><a class="anchor" href="#_additional_considerations"></a><a class="link" href="#_additional_considerations">6. Additional Considerations</a></h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Databases</p>
+</li>
+<li>
+<p>ML / AI</p>
+</li>
+<li>
+<p>Analytics &amp; Reporting</p>
+</li>
+<li>
+<p>Security</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_additional_resources"><a class="anchor" href="#_additional_resources"></a><a class="link" href="#_additional_resources">7. Additional Resources</a></h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://www.youtube.com/watch?time_continue=2359&amp;v=NRZ6N4e-Mko">Container Wars</a></p>
+</li>
+<li>
+<p><a href="https://www.youtube.com/watch?time_continue=2&amp;v=LtELzpw1l1M">Kubernetes, Serverless, and You</a></p>
+</li>
+<li>
+<p><a href="https://medium.com/@odedia/comparing-kubernetes-to-pivotal-cloud-foundry-a-developers-perspective-6d40a911f257">Comparing Kubernetes to Pivotal Cloud Foundry</a></p>
+</li>
+<li>
+<p><a href="https://onepercentamonth.com/2018/10/08/caas-vs-paas-and-kubernetes-vs-pks/">CaaS vs PaaS and Kubernetes vs PKS</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_footnotes"><a class="anchor" href="#_footnotes"></a><a class="link" href="#_footnotes">8. Footnotes</a></h2>
+<div class="sectionbody">
+
+</div>
+</div>
+<div id="footnotes">
+<hr/>
+<div class="footnote" id="_footnotedef_1">
+<a href="#_footnoteref_1">1</a>. <a href="https://www.yourdictionary.com/iaas#computer" class="bare">https://www.yourdictionary.com/iaas#computer</a>
+</div>
+<div class="footnote" id="_footnotedef_2">
+<a href="#_footnoteref_2">2</a>. <a href="https://www.techopedia.com/definition/32444/containers-as-a-service-caas" class="bare">https://www.techopedia.com/definition/32444/containers-as-a-service-caas</a>
+</div>
+<div class="footnote" id="_footnotedef_3">
+<a href="#_footnoteref_3">3</a>. <a href="https://www.yourdictionary.com/paas#computer" class="bare">https://www.yourdictionary.com/paas#computer</a>
+</div>
+<div class="footnote" id="_footnotedef_4">
+<a href="#_footnoteref_4">4</a>. <a href="https://www.yourdictionary.com/serverless-computing#computer" class="bare">https://www.yourdictionary.com/serverless-computing#computer</a>
+</div>
+<div class="footnote" id="_footnotedef_5">
+<a href="#_footnoteref_5">5</a>. <a href="https://www.yourdictionary.com/saas#computer" class="bare">https://www.yourdictionary.com/saas#computer</a>
+</div>
+<div class="footnote" id="_footnotedef_6">
+<a href="#_footnoteref_6">6</a>. <a href="http://strategictoolkits.com/strategic-concepts/core-and-context/" class="bare">http://strategictoolkits.com/strategic-concepts/core-and-context/</a>
+</div>
+</div>
+
+                        </div>
+                        
+                        
+                        <div id="comments">
+                            <div id="disqus_thread"></div>
+<script type="application/javascript">
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "jshingler" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+                        </div>
+                        
+
+                    </div>
+                    
+
+                    
+
+                    
+
+                    <div class="col-md-3">
+
+                        
+
+                        
+
+<div class="panel panel-default sidebar-menu">
+
+    <div class="panel-heading">
+      <h3 class="panel-title">Search</h3>
+    </div>
+
+    <div class="panel-body">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" role="search">
+            <div class="input-group">
+                <input type="search" name="q" class="form-control" placeholder="Search">
+                <input type="hidden" name="sitesearch" value="https://jshingler.github.io/">
+                <span class="input-group-btn">
+                    <button type="submit" class="btn btn-template-main"><i class="fas fa-search"></i></button>
+                </span>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+
+
+
+
+
+<div class="panel panel-default sidebar-menu">
+
+    <div class="panel-heading">
+        <h3 class="panel-title">Categories</h3>
+    </div>
+
+    <div class="panel-body">
+        <ul class="nav nav-pills nav-stacked">
+            
+            
+            <li>
+                <a href="/categories/cloud">cloud (2)</a>
+            </li>
+            
+            <li>
+                <a href="/categories/devops">devops (1)</a>
+            </li>
+            
+            <li>
+                <a href="/categories/general">general (2)</a>
+            </li>
+            
+            <li>
+                <a href="/categories/lorem">lorem (1)</a>
+            </li>
+            
+            <li>
+                <a href="/categories/obs">obs (1)</a>
+            </li>
+            
+            <li>
+                <a href="/categories/presentations">presentations (1)</a>
+            </li>
+            
+            <li>
+                <a href="/categories/programming">programming (4)</a>
+            </li>
+            
+            <li>
+                <a href="/categories/pseudo">pseudo (1)</a>
+            </li>
+            
+            <li>
+                <a href="/categories/starting">starting (1)</a>
+            </li>
+            
+            <li>
+                <a href="/categories/thinking">thinking (1)</a>
+            </li>
+            
+        </ul>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+<div class="panel sidebar-menu">
+
+    <div class="panel-heading">
+        <h3 class="panel-title">Tags</h3>
+    </div>
+
+    <div class="panel-body">
+        <ul class="tag-cloud">
+            
+            
+            <li>
+                <a href="/tags/asciidoc"><i class="fas fa-tags"></i> asciidoc</a>
+            </li>
+            
+            <li>
+                <a href="/tags/caas"><i class="fas fa-tags"></i> caas</a>
+            </li>
+            
+            <li>
+                <a href="/tags/cloud"><i class="fas fa-tags"></i> cloud</a>
+            </li>
+            
+            <li>
+                <a href="/tags/devops"><i class="fas fa-tags"></i> devops</a>
+            </li>
+            
+            <li>
+                <a href="/tags/faas"><i class="fas fa-tags"></i> faas</a>
+            </li>
+            
+            <li>
+                <a href="/tags/go"><i class="fas fa-tags"></i> go</a>
+            </li>
+            
+            <li>
+                <a href="/tags/golang"><i class="fas fa-tags"></i> golang</a>
+            </li>
+            
+            <li>
+                <a href="/tags/hugo"><i class="fas fa-tags"></i> hugo</a>
+            </li>
+            
+            <li>
+                <a href="/tags/iaas"><i class="fas fa-tags"></i> iaas</a>
+            </li>
+            
+            <li>
+                <a href="/tags/ipsum"><i class="fas fa-tags"></i> ipsum</a>
+            </li>
+            
+            <li>
+                <a href="/tags/paas"><i class="fas fa-tags"></i> paas</a>
+            </li>
+            
+            <li>
+                <a href="/tags/pkm"><i class="fas fa-tags"></i> pkm</a>
+            </li>
+            
+            <li>
+                <a href="/tags/presentations"><i class="fas fa-tags"></i> presentations</a>
+            </li>
+            
+            <li>
+                <a href="/tags/programming"><i class="fas fa-tags"></i> programming</a>
+            </li>
+            
+            <li>
+                <a href="/tags/resources"><i class="fas fa-tags"></i> resources</a>
+            </li>
+            
+            <li>
+                <a href="/tags/saas"><i class="fas fa-tags"></i> saas</a>
+            </li>
+            
+            <li>
+                <a href="/tags/thankyou"><i class="fas fa-tags"></i> thankyou</a>
+            </li>
+            
+            <li>
+                <a href="/tags/theme"><i class="fas fa-tags"></i> theme</a>
+            </li>
+            
+            <li>
+                <a href="/tags/value-line"><i class="fas fa-tags"></i> value-line</a>
+            </li>
+            
+            <li>
+                <a href="/tags/xaas"><i class="fas fa-tags"></i> xaas</a>
+            </li>
+            
+        </ul>
+    </div>
+
+</div>
+
+
+
+
+
+
+                        
+
+                    </div>
+                    
+
+                    
+
+                </div>
+                
+
+            </div>
+            
+        </div>
+        
+
+        <footer id="footer">
+    <div class="container">
+
+        
+        <div class="col-md-4 col-sm-6">
+            <h4>About us</h4>
+
+            Always Be Learning.
+
+            <hr class="hidden-md hidden-lg hidden-sm">
+
+        </div>
+        
+        
+
+        <div class="col-md-4 col-sm-6">
+
+             
+            <h4>Recent posts</h4>
+
+            <div class="blog-entries">
+                
+                <div class="item same-height-row clearfix">
+                    <div class="image same-height-always">
+                        <a href="https://jshingler.github.io/blog/2023/04/01/valueline/">
+                          
+                            <img src="/img/blog/ValueLine/ValueLine.png" class="img-responsive" alt="Value Line">
+                          
+                        </a>
+                    </div>
+                    <div class="name same-height-always">
+                        <h5><a href="https://jshingler.github.io/blog/2023/04/01/valueline/">Value Line</a></h5>
+                    </div>
+                </div>
+                
+                <div class="item same-height-row clearfix">
+                    <div class="image same-height-always">
+                        <a href="https://jshingler.github.io/blog/2022/03/05/xaas/">
+                          
+                            <img src="/img/blog/XaaS/xaas.png" class="img-responsive" alt="XaaS">
+                          
+                        </a>
+                    </div>
+                    <div class="name same-height-always">
+                        <h5><a href="https://jshingler.github.io/blog/2022/03/05/xaas/">XaaS</a></h5>
+                    </div>
+                </div>
+                
+                <div class="item same-height-row clearfix">
+                    <div class="image same-height-always">
+                        <a href="https://jshingler.github.io/blog/2021/10/30/personal-knowledge-system/">
+                          
+                            <img src="/img/banners/PKM.jpeg" class="img-responsive" alt="Personal Knowledge System">
+                          
+                        </a>
+                    </div>
+                    <div class="name same-height-always">
+                        <h5><a href="https://jshingler.github.io/blog/2021/10/30/personal-knowledge-system/">Personal Knowledge System</a></h5>
+                    </div>
+                </div>
+                
+            </div>
+
+            <hr class="hidden-md hidden-lg">
+             
+
+        </div>
+        
+
+        
+        <div class="col-md-4 col-sm-6">
+
+          <h4>Contact</h4>
+
+            <!-- raw HTML omitted -->
+
+            <a href="/contact" class="btn btn-small btn-template-main">Go to contact page</a>
+
+            <hr class="hidden-md hidden-lg hidden-sm">
+
+        </div>
+        
+        
+
+    </div>
+    
+</footer>
+
+
+
+
+
+
+
+<div id="copyright">
+    <div class="container">
+        <div class="col-md-12">
+            
+            <p class="pull-left">Copyright (c) 2015 - 2020, JShingler; all rights reserved.</p>
+            
+            <p class="pull-right">
+              Template by <a href="https://bootstrapious.com/p/universal-business-e-commerce-template">Bootstrapious</a>.
+              
+
+              Ported to Hugo by <a href="https://github.com/devcows/hugo-universal-theme">DevCows</a>.
+            </p>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+    </div>
+    
+
+    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-154182389-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script src="//code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0/jquery.counterup.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-parallax/1.1.3/jquery-parallax.js"></script>
+
+<script src="//maps.googleapis.com/maps/api/js?key=AIzaSyA1N45cD4qWwsgnuE1F39p1SYaM0w0ldQg&v=3.exp"></script>
+
+<script src="/js/hpneo.gmaps.js"></script>
+<script src="/js/gmaps.init.js"></script>
+<script src="/js/front.js"></script>
+
+
+<script src="/js/owl.carousel.min.js"></script>
+
+
+<script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js?skin=sons-of-obsidian"></script> 
+
+
+
+
+  </body>
+</html>
