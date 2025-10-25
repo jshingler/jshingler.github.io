@@ -1,0 +1,1314 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <head>
+  <meta charset="utf-8">
+  <meta name="robots" content="all,follow">
+  <meta name="googlebot" content="index,follow,snippet,archive">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <title>Package by Layer vs Package by Feature (How Clean Architecture and Hexigonal Architecture fit in)</title>
+  <meta name="author" content="Jim Shingler" />
+  
+  
+  
+  
+  <meta name="keywords" content="jshingler, Jim Shingler, James Shingler, Shingler, Schindler, Lean, Agile, devOps, java, Spring, Cloud Native, Microservices, hugo, go, Spring Boot, Architecture, Clean Architecture, Hexagonal Architecture, Software Design">
+  
+  
+  <meta name="description" content="A practical guide to structuring your Spring Boot applications — exploring package-by-layer, package-by-feature, and how Clean Architecture and Hexagonal Architecture fit together.">
+
+  <meta name="generator" content="Hugo 0.111.3">
+
+  
+
+
+<link rel="stylesheet" href="https://jshingler.github.io/css/custom.css">
+
+
+
+  
+  <link href='//fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,500,700,800' rel='stylesheet' type='text/css'>
+
+  
+  <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.11.2/css/all.css">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+  
+  <link href="/css/animate.css" rel="stylesheet">
+
+  
+  
+    <link href="/css/style.default.css" rel="stylesheet" id="theme-stylesheet">
+  
+
+  
+  <link href="/css/custom.css" rel="stylesheet">
+
+  
+  
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  
+
+  
+  <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" href="/img/apple-touch-icon.png" />
+
+  
+  <link href="/css/owl.carousel.css" rel="stylesheet">
+  <link href="/css/owl.theme.css" rel="stylesheet">
+
+  
+  <link rel="alternate" href="https://jshingler.github.io/index.xml" type="application/rss+xml" title="Jim Shingler Blog">
+
+  
+  
+  
+  
+  
+  
+  
+  <meta property="og:locale" content="en_us">
+  <meta property="og:site_name" content="Jim Shingler Blog">
+  <meta property="og:title" content="Package by Layer vs Package by Feature (How Clean Architecture and Hexigonal Architecture fit in)">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://jshingler.github.io/blog/2025/10/25/package-by-feature-vs-clean-architecture/" />
+  <meta property="og:description" content="A practical guide to structuring your Spring Boot applications — exploring package-by-layer, package-by-feature, and how Clean Architecture and Hexagonal Architecture fit together.">
+  <meta property="og:image" content="https://jshingler.github.io/img/banners/packageLayerFunction.png">
+  <meta property="og:image:type" content="image/png">
+  
+  
+  
+    <meta property="og:image:width" content="1536">
+    <meta property="og:image:height" content="1024">
+  
+  
+  <meta property="og:updated_time" content="2025-10-25T00:00:00Z">
+  
+    
+    
+    
+    <meta property="article:tag" content="Spring Boot">
+    <meta property="article:tag" content="Architecture">
+    <meta property="article:tag" content="Clean Architecture">
+    <meta property="article:tag" content="Hexagonal Architecture">
+    <meta property="article:tag" content="Software Design">
+    <meta property="article:tag" content="java">
+    
+    
+    <meta property="article:published_time" content="2025-10-25T00:00:00Z">
+    <meta property="article:modified_time" content="2025-10-25T00:00:00Z">
+  
+
+  
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@GoHugoIO">
+  <meta name="twitter:title" content="Package by Layer vs Package by Feature (How Clean Architecture and …">
+  
+  <meta name="twitter:image" content="https://jshingler.github.io/img/banners/packageLayerFunction.png">
+  
+  <meta name="twitter:description" content="A practical guide to structuring your Spring Boot applications — exploring package-by-layer, package-by-feature, and how Clean Architecture and Hexagonal Architecture fit together.">
+  
+
+</head>
+
+
+  <body>
+
+    <div id="all">
+
+        <header>
+
+          <div class="navbar-affixed-top" data-spy="affix" data-offset-top="200">
+
+    <div class="navbar navbar-default yamm" role="navigation" id="navbar">
+
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand home" href="/">
+                    <img src="/img/JShingler2.png" alt="Package by Layer vs Package by Feature (How Clean Architecture and Hexigonal Architecture fit in) logo" class="hidden-xs hidden-sm">
+                    <img src="/" alt="Package by Layer vs Package by Feature (How Clean Architecture and Hexigonal Architecture fit in) logo" class="visible-xs visible-sm">
+                    <span class="sr-only">Package by Layer vs Package by Feature (How Clean Architecture and Hexigonal Architecture fit in) - go to homepage</span>
+                </a>
+                <div class="navbar-buttons">
+                    <button type="button" class="navbar-toggle btn-template-main" data-toggle="collapse" data-target="#navigation">
+                      <span class="sr-only">Toggle Navigation</span>
+                        <i class="fas fa-align-justify"></i>
+                    </button>
+                </div>
+            </div>
+            
+
+            <div class="navbar-collapse collapse" id="navigation">
+                <ul class="nav navbar-nav navbar-right">
+                  
+                  
+                  
+                  <li class="dropdown">
+                    
+                    <a href="/">Home</a>
+                    
+                  </li>
+                  
+                  
+                  <li class="dropdown active">
+                    
+                    <a href="/blog/">Blog</a>
+                    
+                  </li>
+                  
+                  
+                  <li class="dropdown">
+                    
+                    <a href="/presentations/">Presentations</a>
+                    
+                  </li>
+                  
+                  
+                  <li class="dropdown">
+                    
+                    <a href="/faq/">FAQ</a>
+                    
+                  </li>
+                  
+                  
+                  <li class="dropdown">
+                    
+                    <a href="/contact/">Contact</a>
+                    
+                  </li>
+                  
+                </ul>
+            </div>
+            
+
+            <div class="collapse clearfix" id="search">
+
+                <form class="navbar-form" role="search">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search">
+                        <span class="input-group-btn">
+
+                    <button type="submit" class="btn btn-template-main"><i class="fas fa-search"></i></button>
+
+                </span>
+                    </div>
+                </form>
+
+            </div>
+            
+
+        </div>
+    </div>
+    
+
+</div>
+
+
+
+
+        </header>
+
+        <div id="heading-breadcrumbs">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1>Package by Layer vs Package by Feature (How Clean Architecture and Hexigonal Architecture fit in)</h1>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+        <div id="content">
+            <div class="container">
+
+                <div class="row">
+
+                    
+
+                    <div class="col-md-9" id="blog-post">
+
+                        <p class="text-muted text-uppercase mb-small text-right">By <a href="#">Jim Shingler</a> | October 25, 2025</p>
+
+                        <div id="post-content">
+                          <div class="sect1">
+<h2 id="_package_by_layer_vs_package_by_feature">Package by Layer vs Package by Feature</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_how_clean_architecture_and_hexagonal_architecture_fit_in">How Clean Architecture and Hexagonal Architecture fit in</h3>
+<div class="paragraph">
+<p>In Java Spring Boot development, one of the most impactful architectural
+choices you’ll make is how to <strong>organize your code</strong>.<br/>
+Should you package by <em>layer</em> — like controller, service, and repository
+— or by <em>feature</em> — like order, customer, and inventory?</p>
+</div>
+<div class="paragraph">
+<p>And where do <strong>Clean Architecture</strong> and <strong>Hexagonal Architecture</strong> fit into
+all of this?</p>
+</div>
+<div class="paragraph">
+<p>Let’s unpack the trade-offs, principles, and evolution path — with a
+touch of wisdom inspired by <a href="https://danvega.dev">Dan Vega</a>, who’s known
+for his pragmatic approach to clean, maintainable Spring Boot
+applications.</p>
+</div>
+<hr/>
+</div>
+<div class="sect2">
+<h3 id="_package_by_layer_the_traditional_approach">🧱 Package by Layer — The Traditional Approach</h3>
+<div class="sect3">
+<h4 id="_example_structure">Example Structure</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-text" data-lang="text">com.example.orders
+├── controller
+│   └── OrderController.java
+├── service
+│   └── OrderService.java
+├── repository
+│   └── OrderRepository.java
+└── model
+    └── Order.java</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_philosophy">Philosophy</h4>
+<div class="paragraph">
+<p>Group classes by their <em>technical role</em> — all controllers together, all
+services together, all repositories together.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_pros">Pros</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>Clear separation of concerns<br/></p>
+</li>
+<li>
+<p>Familiar and easy for newcomers<br/></p>
+</li>
+<li>
+<p>Works fine for small or simple apps</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_cons">Cons</h4>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Low cohesion:</strong> Each feature’s code is scattered<br/></p>
+</li>
+<li>
+<p><strong>Tight coupling:</strong> Shared services and models blur boundaries<br/></p>
+</li>
+<li>
+<p><strong>Poor scalability:</strong> Harder to isolate or modularize features</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_when_to_use">When to Use</h4>
+<div class="paragraph">
+<p>Package-by-layer works well when: - You’re building a <strong>small app or
+prototype</strong><br/>
+- The <strong>team is small and co-located</strong><br/>
+- You don’t anticipate splitting into modules or services later</p>
+</div>
+<hr/>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_package_by_feature_the_modern_approach">🧩 Package by Feature — The Modern Approach</h3>
+<div class="sect3">
+<h4 id="_example_structure_2">Example Structure</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-text" data-lang="text">com.example.orders
+├── order
+│   ├── OrderController.java
+│   ├── OrderService.java
+│   ├── OrderRepository.java
+│   └── Order.java
+├── customer
+│   ├── CustomerController.java
+│   ├── CustomerService.java
+│   ├── CustomerRepository.java
+│   └── Customer.java</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_philosophy_2">Philosophy</h4>
+<div class="paragraph">
+<p>Group code by <strong>business capability</strong> or <strong>domain concept</strong>, not by
+technical role.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_pros_2">Pros</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>High cohesion — each feature is self-contained<br/></p>
+</li>
+<li>
+<p>Easier to reason about, test, and refactor<br/></p>
+</li>
+<li>
+<p>Natural fit for <strong>domain-driven design (DDD)</strong><br/></p>
+</li>
+<li>
+<p>Enables modular ownership and microservice extraction</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_cons_2">Cons</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>Less conventional — can confuse new developers<br/></p>
+</li>
+<li>
+<p>Requires discipline to avoid cross-feature coupling<br/></p>
+</li>
+<li>
+<p>May duplicate small utilities across features (by design)</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_when_to_use_2">When to Use</h4>
+<div class="paragraph">
+<p>Use package-by-feature when: - You’re building a <strong>larger or growing
+system</strong><br/>
+- You expect <strong>multiple teams or domains</strong><br/>
+- You want to evolve toward <strong>modularity or microservices</strong></p>
+</div>
+<hr/>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_️_package_by_layer_vs_package_by_feature">⚖️ Package-by-Layer vs Package-by-Feature</h3>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;"/>
+<col style="width: 33.3333%;"/>
+<col style="width: 33.3334%;"/>
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Aspect</th>
+<th class="tableblock halign-left valign-top">Package by Layer</th>
+<th class="tableblock halign-left valign-top">Package by Feature</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Cohesion</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Low</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">High</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Coupling</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">High</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Low</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Refactorability</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Harder</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Easier</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Testing</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Broad integration tests</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Isolated feature tests</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Scalability</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Monolithic</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Modular</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Team Fit</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Centralized ownership</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Cross-functional ownership</p></td>
+</tr>
+</tbody>
+</table>
+<hr/>
+</div>
+<div class="sect2">
+<h3 id="_enter_clean_architecture">🧭 Enter Clean Architecture</h3>
+<div class="paragraph">
+<p><strong>Creator:</strong> Robert C. Martin (Uncle Bob)</p>
+</div>
+<div class="paragraph">
+<p><strong>Core Rule:</strong><br/>
+&gt; Business logic should not depend on frameworks, databases, or UI.
+Dependencies point <strong>inward</strong>, toward the domain.</p>
+</div>
+<div class="sect3">
+<h4 id="_conceptual_view">Conceptual View</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-text" data-lang="text">Frameworks &amp; UI (Spring, REST)
+        ↓
+Interface Adapters (DTOs, Mappers)
+        ↓
+Application Services (Use Cases)
+        ↓
+Domain Entities (Business Rules)</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_example_layout">Example Layout</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-text" data-lang="text">com.example.order
+├── domain
+│   └── Order.java
+├── application
+│   └── PlaceOrderUseCase.java
+├── interfaces
+│   └── web
+│       └── OrderController.java
+└── infrastructure
+    └── JpaOrderRepository.java</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_key_idea">Key Idea</h4>
+<div class="paragraph">
+<p>Your <strong>domain</strong> and <strong>application</strong> code should know <em>nothing</em> about Spring,
+HTTP, or JPA.<br/>
+They’re just Java. The outer layers handle frameworks and adapters.</p>
+</div>
+<hr/>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_hexagonal_architecture_ports_adapters">🔶 Hexagonal Architecture (Ports &amp; Adapters)</h3>
+<div class="paragraph">
+<p><strong>Creator:</strong> Alistair Cockburn</p>
+</div>
+<div class="paragraph">
+<p><strong>Goal:</strong><br/>
+&gt; Make your application independent of its runtime environment.</p>
+</div>
+<div class="sect3">
+<h4 id="_conceptual_diagram">Conceptual Diagram</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-text" data-lang="text">           +------------------------+
+           |        Adapters        |
+           | (REST, DB, Kafka, etc) |
+           +------------------------+
+             ↑                ↓
+         Inbound Port     Outbound Port
+             ↑                ↓
+           +----------------------+
+           |      Domain Core     |
+           |  Entities &amp; UseCases |
+           +----------------------+</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_example_structure_3">Example Structure</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-text" data-lang="text">com.example.order
+├── application
+│   ├── port
+│   │   ├── inbound
+│   │   │   └── PlaceOrderUseCase.java
+│   │   └── outbound
+│   │       └── OrderRepository.java
+│   └── service
+│       └── PlaceOrderService.java
+├── domain
+│   └── Order.java
+├── adapters
+│   ├── inbound
+│   │   └── OrderController.java
+│   └── outbound
+│       └── JpaOrderRepository.java</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_focus">Focus</h4>
+<div class="paragraph">
+<p>Clean architecture focuses on <em>dependency direction</em>.<br/>
+Hexagonal focuses on <em>communication boundaries (ports and adapters).</em><br/>
+In practice, most modern teams blend both.</p>
+</div>
+<hr/>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_the_hybrid_package_by_feature_cleanhexagonal_inside">🧩 The Hybrid: Package-by-Feature + Clean/Hexagonal Inside</h3>
+<div class="paragraph">
+<p>Here’s the <em>best of both worlds</em>:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-text" data-lang="text">com.example.shop
+├── order
+│   ├── domain
+│   ├── application
+│   ├── adapters
+│   │   ├── inbound
+│   │   └── outbound
+│   └── infrastructure
+├── customer
+│   ├── domain
+│   ├── application
+│   ├── adapters
+│   └── infrastructure
+└── shared
+    ├── config
+    └── common</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Each <strong>feature</strong>: - Owns its own domain, application, and adapters<br/>
+- Respects Clean/Hexagonal layering internally<br/>
+- Can evolve independently or be extracted later</p>
+</div>
+<hr/>
+</div>
+<div class="sect2">
+<h3 id="_why_it_works">🧠 Why It Works</h3>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;"/>
+<col style="width: 50%;"/>
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Principle</th>
+<th class="tableblock halign-left valign-top">Benefit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Feature-first</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Keeps code cohesive and understandable</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Layering within feature</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Enforces clean boundaries</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Isolation</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Easier testing and refactoring</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Scalability</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Each feature can evolve separately</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Spring alignment</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Works naturally with component scanning</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>This hybrid structure is exactly what many experienced Spring Boot
+engineers (Dan Vega included) use for production systems.</p>
+</div>
+<hr/>
+</div>
+<div class="sect2">
+<h3 id="_take_on_all_this">🧩 Take on All This</h3>
+<div class="paragraph">
+<p>It boils down to <strong>practicality over purity</strong>.<br/>
+Remember do not to overcomplicate your first commit.</p>
+</div>
+<div class="sect3">
+<h4 id="_1_start_simple">1. Start Simple</h4>
+<div class="quoteblock">
+<blockquote>
+<div class="paragraph">
+<p>``You don’t earn the right to a Clean Architecture until you have
+complexity to clean.&#39;&#39;</p>
+</div>
+</blockquote>
+</div>
+<div class="paragraph">
+<p>Begin with package-by-feature. Refactor toward layers <em>as needed</em>.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_2_use_spring_idiomatically">2. Use Spring Idiomatically</h4>
+<div class="paragraph">
+<p>Don’t fight the framework — let Spring handle DI and config. Keep your
+domain pure, but use <code>@Service</code>, <code>@Repository</code>, and <code>@RestController</code>
+where appropriate.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_3_organize_for_humans">3. Organize for Humans</h4>
+<div class="quoteblock">
+<blockquote>
+<div class="paragraph">
+<p>``Your package structure should tell the story of your app — what it
+does, not just what tech it uses.&#39;&#39;</p>
+</div>
+</blockquote>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_4_think_in_use_cases">4. Think in Use Cases</h4>
+<div class="paragraph">
+<p>Replace CRUD-style services with explicit, business-driven use cases.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-java" data-lang="java">interface PlaceOrderUseCase {
+    OrderResponse placeOrder(OrderRequest request);
+}</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_5_design_for_testability">5. Design for Testability</h4>
+<div class="quoteblock">
+<blockquote>
+<div class="paragraph">
+<p>``If it’s hard to test, it’s in the wrong place.&#39;&#39;</p>
+</div>
+</blockquote>
+</div>
+<div class="paragraph">
+<p>Keep domain logic testable without Spring.<br/>
+Controllers and repos should have their own slice tests.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_6_optimize_developer_experience">6. Optimize Developer Experience</h4>
+<div class="quoteblock">
+<blockquote>
+<div class="paragraph">
+<p>``If your app takes longer to boot than it takes to pour a coffee, fix
+your architecture.&#39;&#39;</p>
+</div>
+</blockquote>
+</div>
+<div class="paragraph">
+<p>Use fast feedback loops, Spring DevTools, and modular scanning.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_7_refactor_toward_clean">7. Refactor Toward Clean</h4>
+<div class="quoteblock">
+<blockquote>
+<div class="paragraph">
+<p>``Good architecture is what lets you keep shipping features without
+hating yourself in six months.&#39;&#39;</p>
+</div>
+</blockquote>
+</div>
+<hr/>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_the_evolution_path">🧩 The Evolution Path</h3>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 27%;"/>
+<col style="width: 37%;"/>
+<col style="width: 18%;"/>
+<col style="width: 18%;"/>
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Stage</th>
+<th class="tableblock halign-left valign-top">Structure</th>
+<th class="tableblock halign-left valign-top">Pros</th>
+<th class="tableblock halign-left valign-top">Cons</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>1. Package-by-layer</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>controller/service/repository</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Simple</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Scattered logic</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>2. Package-by-feature (flat)</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>order/OrderService.java</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Feature
+cohesion</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Weak boundaries</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>3. Package-by-feature + internal layers</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>order/domain/…​</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Cohesion
++ discipline</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Slightly more setup</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>That’s the natural journey — and it’s exactly what Dan Vega (and most
+senior Spring engineers) would recommend.</p>
+</div>
+<hr/>
+</div>
+<div class="sect2">
+<h3 id="_key_takeaways">💡 Key Takeaways</h3>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Package by feature</strong> for cohesion.<br/></p>
+</li>
+<li>
+<p><strong>Layer within each feature</strong> for clean boundaries.<br/></p>
+</li>
+<li>
+<p><strong>Evolve gradually</strong> — architecture maturity comes with complexity.<br/></p>
+</li>
+<li>
+<p><strong>Use Spring idiomatically</strong> — it already supports this style.<br/></p>
+</li>
+<li>
+<p><strong>Design for humans and testability</strong> — that’s the real ``clean.&#39;&#39;</p>
+</li>
+</ul>
+</div>
+<hr/>
+<div class="quoteblock">
+<blockquote>
+<div class="paragraph">
+<p>``Group by business capability, structure by architectural boundary.&#39;&#39;<br/>
+— A principle for every scalable Spring Boot codebase.</p>
+</div>
+</blockquote>
+</div>
+<hr/>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_additional_resources">Additional Resources</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_the_book_primary_source">The Book (Primary Source)</h3>
+<div class="paragraph">
+<p><strong>Clean Architecture: A Craftsman’s Guide to Software Structure and Design</strong> by Robert C. Martin (Uncle Bob)
+O’Reilly Media · Google Books</p>
+</div>
+<div class="paragraph">
+<p>This is the definitive reference — covering architecture goals, design principles, component boundaries, and proven patterns for maintainable systems.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>O’Reilly Media:: <a href="https://www.oreilly.com/library/view/clean-architecture-a/9780134494272/" class="bare">https://www.oreilly.com/library/view/clean-architecture-a/9780134494272/</a></p>
+</li>
+<li>
+<p>Google Books:: <a href="https://books.google.com/books/about/Clean_Architecture.html?id=ikQZswEACAAJ" class="bare">https://books.google.com/books/about/Clean_Architecture.html?id=ikQZswEACAAJ</a></p>
+</li>
+</ul>
+</div>
+<hr/>
+</div>
+<div class="sect2">
+<h3 id="_blog_post_by_uncle_bob">Blog Post by Uncle Bob</h3>
+<div class="paragraph">
+<p><strong>“The Clean Architecture”</strong> — by Robert C. Martin
+Published on the <strong>Clean Coder Blog</strong></p>
+</div>
+<div class="paragraph">
+<p>Good for hearing the ideas in his own voice — frameworks, rules, and why the dependency direction matters.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Clean Coder Blog:: <a href="https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html" class="bare">https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html</a></p>
+</li>
+</ul>
+</div>
+<hr/>
+</div>
+<div class="sect2">
+<h3 id="_original_article_by_the_creator_hexagonal_architecture">Original Article by the Creator (Hexagonal Architecture)</h3>
+<div class="paragraph">
+<p><strong>Hexagonal Architecture</strong> — by Alistair Cockburn</p>
+</div>
+<div class="paragraph">
+<p>Alistair Cockburn’s write-up is a must-read — it provides the foundational thinking behind the Ports and Adapters pattern and is ideal for grounding your understanding.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>alistair.cockburn.us:: <a href="https://alistair.cockburn.us/hexagonal-architecture/" class="bare">https://alistair.cockburn.us/hexagonal-architecture/</a></p>
+</li>
+<li>
+<p>alistaircockburn.com:: <a href="https://alistaircockburn.com/hexagonal-architecture/" class="bare">https://alistaircockburn.com/hexagonal-architecture/</a></p>
+</li>
+</ul>
+</div>
+<hr/>
+</div>
+<div class="sect2">
+<h3 id="_aws_prescriptive_guidance">AWS Prescriptive Guidance</h3>
+<div class="paragraph">
+<p><strong>Hexagonal Architecture – AWS Prescriptive Guidance</strong></p>
+</div>
+<div class="paragraph">
+<p>The Amazon Web Services documentation offers a practical overview of Hexagonal Architecture and when to apply it.</p>
+</div>
+<div class="paragraph">
+<p>Useful for seeing how the pattern is applied in scalable, cloud-native contexts.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>AWS Documentation:: <a href="https://docs.aws.amazon.com/prescriptive-guidance/latest/cloud-design-patterns/hexagonal-architecture.html" class="bare">https://docs.aws.amazon.com/prescriptive-guidance/latest/cloud-design-patterns/hexagonal-architecture.html</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+                        </div>
+                        
+                        
+                        <div id="comments">
+                            <div id="disqus_thread"></div>
+<script type="application/javascript">
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "jshingler" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+                        </div>
+                        
+
+                    </div>
+                    
+
+                    
+
+                    
+
+                    <div class="col-md-3">
+
+                        
+
+                        
+
+<div class="panel panel-default sidebar-menu">
+
+    <div class="panel-heading">
+      <h3 class="panel-title">Search</h3>
+    </div>
+
+    <div class="panel-body">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" role="search">
+            <div class="input-group">
+                <input type="search" name="q" class="form-control" placeholder="Search">
+                <input type="hidden" name="sitesearch" value="https://jshingler.github.io/">
+                <span class="input-group-btn">
+                    <button type="submit" class="btn btn-template-main"><i class="fas fa-search"></i></button>
+                </span>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+
+
+
+
+
+<div class="panel panel-default sidebar-menu">
+
+    <div class="panel-heading">
+        <h3 class="panel-title">Categories</h3>
+    </div>
+
+    <div class="panel-body">
+        <ul class="nav nav-pills nav-stacked">
+            
+            
+            <li>
+                <a href="/categories/cloud">cloud (2)</a>
+            </li>
+            
+            <li>
+                <a href="/categories/devops">devops (1)</a>
+            </li>
+            
+            <li>
+                <a href="/categories/general">general (2)</a>
+            </li>
+            
+            <li>
+                <a href="/categories/lorem">lorem (1)</a>
+            </li>
+            
+            <li>
+                <a href="/categories/obs">obs (1)</a>
+            </li>
+            
+            <li>
+                <a href="/categories/presentations">presentations (1)</a>
+            </li>
+            
+            <li>
+                <a href="/categories/programming">programming (4)</a>
+            </li>
+            
+            <li>
+                <a href="/categories/pseudo">pseudo (1)</a>
+            </li>
+            
+            <li>
+                <a href="/categories/starting">starting (1)</a>
+            </li>
+            
+            <li>
+                <a href="/categories/thinking">thinking (1)</a>
+            </li>
+            
+        </ul>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+<div class="panel sidebar-menu">
+
+    <div class="panel-heading">
+        <h3 class="panel-title">Tags</h3>
+    </div>
+
+    <div class="panel-body">
+        <ul class="tag-cloud">
+            
+            
+            <li>
+                <a href="/tags/architecture"><i class="fas fa-tags"></i> architecture</a>
+            </li>
+            
+            <li>
+                <a href="/tags/asciidoc"><i class="fas fa-tags"></i> asciidoc</a>
+            </li>
+            
+            <li>
+                <a href="/tags/caas"><i class="fas fa-tags"></i> caas</a>
+            </li>
+            
+            <li>
+                <a href="/tags/clean-architecture"><i class="fas fa-tags"></i> clean-architecture</a>
+            </li>
+            
+            <li>
+                <a href="/tags/cloud"><i class="fas fa-tags"></i> cloud</a>
+            </li>
+            
+            <li>
+                <a href="/tags/devops"><i class="fas fa-tags"></i> devops</a>
+            </li>
+            
+            <li>
+                <a href="/tags/faas"><i class="fas fa-tags"></i> faas</a>
+            </li>
+            
+            <li>
+                <a href="/tags/go"><i class="fas fa-tags"></i> go</a>
+            </li>
+            
+            <li>
+                <a href="/tags/golang"><i class="fas fa-tags"></i> golang</a>
+            </li>
+            
+            <li>
+                <a href="/tags/hexagonal-architecture"><i class="fas fa-tags"></i> hexagonal-architecture</a>
+            </li>
+            
+            <li>
+                <a href="/tags/hugo"><i class="fas fa-tags"></i> hugo</a>
+            </li>
+            
+            <li>
+                <a href="/tags/iaas"><i class="fas fa-tags"></i> iaas</a>
+            </li>
+            
+            <li>
+                <a href="/tags/ipsum"><i class="fas fa-tags"></i> ipsum</a>
+            </li>
+            
+            <li>
+                <a href="/tags/java"><i class="fas fa-tags"></i> java</a>
+            </li>
+            
+            <li>
+                <a href="/tags/paas"><i class="fas fa-tags"></i> paas</a>
+            </li>
+            
+            <li>
+                <a href="/tags/pkm"><i class="fas fa-tags"></i> pkm</a>
+            </li>
+            
+            <li>
+                <a href="/tags/presentations"><i class="fas fa-tags"></i> presentations</a>
+            </li>
+            
+            <li>
+                <a href="/tags/programming"><i class="fas fa-tags"></i> programming</a>
+            </li>
+            
+            <li>
+                <a href="/tags/resources"><i class="fas fa-tags"></i> resources</a>
+            </li>
+            
+            <li>
+                <a href="/tags/saas"><i class="fas fa-tags"></i> saas</a>
+            </li>
+            
+            <li>
+                <a href="/tags/software-design"><i class="fas fa-tags"></i> software-design</a>
+            </li>
+            
+            <li>
+                <a href="/tags/spring-boot"><i class="fas fa-tags"></i> spring-boot</a>
+            </li>
+            
+            <li>
+                <a href="/tags/thankyou"><i class="fas fa-tags"></i> thankyou</a>
+            </li>
+            
+            <li>
+                <a href="/tags/theme"><i class="fas fa-tags"></i> theme</a>
+            </li>
+            
+            <li>
+                <a href="/tags/value-line"><i class="fas fa-tags"></i> value-line</a>
+            </li>
+            
+            <li>
+                <a href="/tags/xaas"><i class="fas fa-tags"></i> xaas</a>
+            </li>
+            
+        </ul>
+    </div>
+
+</div>
+
+
+
+
+
+
+                        
+
+                    </div>
+                    
+
+                    
+
+                </div>
+                
+
+            </div>
+            
+        </div>
+        
+
+        <footer id="footer">
+    <div class="container">
+
+        
+        <div class="col-md-4 col-sm-6">
+            <h4>About us</h4>
+
+            Always Be Learning.
+
+            <hr class="hidden-md hidden-lg hidden-sm">
+
+        </div>
+        
+        
+
+        <div class="col-md-4 col-sm-6">
+
+             
+            <h4>Recent posts</h4>
+
+            <div class="blog-entries">
+                
+                <div class="item same-height-row clearfix">
+                    <div class="image same-height-always">
+                        <a href="https://jshingler.github.io/blog/2025/10/25/package-by-feature-vs-clean-architecture/">
+                          
+                            <img src="/img/banners/packageLayerFunction.png" class="img-responsive" alt="Package by Layer vs Package by Feature (How Clean Architecture and Hexigonal Architecture fit in)">
+                          
+                        </a>
+                    </div>
+                    <div class="name same-height-always">
+                        <h5><a href="https://jshingler.github.io/blog/2025/10/25/package-by-feature-vs-clean-architecture/">Package by Layer vs Package by Feature (How Clean Architecture and Hexigonal Architecture fit in)</a></h5>
+                    </div>
+                </div>
+                
+                <div class="item same-height-row clearfix">
+                    <div class="image same-height-always">
+                        <a href="https://jshingler.github.io/blog/2023/04/01/valueline/">
+                          
+                            <img src="/img/blog/ValueLine/ValueLine.png" class="img-responsive" alt="Value Line">
+                          
+                        </a>
+                    </div>
+                    <div class="name same-height-always">
+                        <h5><a href="https://jshingler.github.io/blog/2023/04/01/valueline/">Value Line</a></h5>
+                    </div>
+                </div>
+                
+                <div class="item same-height-row clearfix">
+                    <div class="image same-height-always">
+                        <a href="https://jshingler.github.io/blog/2022/03/05/xaas/">
+                          
+                            <img src="/img/blog/XaaS/xaas.png" class="img-responsive" alt="XaaS">
+                          
+                        </a>
+                    </div>
+                    <div class="name same-height-always">
+                        <h5><a href="https://jshingler.github.io/blog/2022/03/05/xaas/">XaaS</a></h5>
+                    </div>
+                </div>
+                
+            </div>
+
+            <hr class="hidden-md hidden-lg">
+             
+
+        </div>
+        
+
+        
+        <div class="col-md-4 col-sm-6">
+
+          <h4>Contact</h4>
+
+            <!-- raw HTML omitted -->
+
+            <a href="/contact" class="btn btn-small btn-template-main">Go to contact page</a>
+
+            <hr class="hidden-md hidden-lg hidden-sm">
+
+        </div>
+        
+        
+
+    </div>
+    
+</footer>
+
+
+
+
+
+
+
+<div id="copyright">
+    <div class="container">
+        <div class="col-md-12">
+            
+            <p class="pull-left">Copyright (c) 2015 - 2020, JShingler; all rights reserved.</p>
+            
+            <p class="pull-right">
+              Template by <a href="https://bootstrapious.com/p/universal-business-e-commerce-template">Bootstrapious</a>.
+              
+
+              Ported to Hugo by <a href="https://github.com/devcows/hugo-universal-theme">DevCows</a>.
+            </p>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+    </div>
+    
+
+    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-154182389-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script src="//code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0/jquery.counterup.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-parallax/1.1.3/jquery-parallax.js"></script>
+
+<script src="//maps.googleapis.com/maps/api/js?key=AIzaSyA1N45cD4qWwsgnuE1F39p1SYaM0w0ldQg&v=3.exp"></script>
+
+<script src="/js/hpneo.gmaps.js"></script>
+<script src="/js/gmaps.init.js"></script>
+<script src="/js/front.js"></script>
+
+
+<script src="/js/owl.carousel.min.js"></script>
+
+
+<script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js?skin=sons-of-obsidian"></script> 
+
+
+
+
+  </body>
+</html>

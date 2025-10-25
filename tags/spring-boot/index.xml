@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Spring Boot on Jim Shingler Blog</title>
+    <link>https://jshingler.github.io/tags/spring-boot/</link>
+    <description>Recent content in Spring Boot on Jim Shingler Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 25 Oct 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://jshingler.github.io/tags/spring-boot/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Package by Layer vs Package by Feature (How Clean Architecture and Hexigonal Architecture fit in)</title>
+      <link>https://jshingler.github.io/blog/2025/10/25/package-by-feature-vs-clean-architecture/</link>
+      <pubDate>Sat, 25 Oct 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://jshingler.github.io/blog/2025/10/25/package-by-feature-vs-clean-architecture/</guid>
+      <description>Package by Layer vs Package by Feature How Clean Architecture and Hexagonal Architecture fit in In Java Spring Boot development, one of the most impactful architectural choices you’ll make is how to organize your code. Should you package by layer — like controller, service, and repository — or by feature — like order, customer, and inventory?
+And where do Clean Architecture and Hexagonal Architecture fit into all of this?</description>
+    </item>
+    
+  </channel>
+</rss>

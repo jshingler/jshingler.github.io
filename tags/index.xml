@@ -6,7 +6,61 @@
     <description>Recent content in Tags on Jim Shingler Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 01 Apr 2023 12:37:26 -0400</lastBuildDate><atom:link href="https://jshingler.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 25 Oct 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://jshingler.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Architecture</title>
+      <link>https://jshingler.github.io/tags/architecture/</link>
+      <pubDate>Sat, 25 Oct 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://jshingler.github.io/tags/architecture/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Clean Architecture</title>
+      <link>https://jshingler.github.io/tags/clean-architecture/</link>
+      <pubDate>Sat, 25 Oct 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://jshingler.github.io/tags/clean-architecture/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Hexagonal Architecture</title>
+      <link>https://jshingler.github.io/tags/hexagonal-architecture/</link>
+      <pubDate>Sat, 25 Oct 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://jshingler.github.io/tags/hexagonal-architecture/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>java</title>
+      <link>https://jshingler.github.io/tags/java/</link>
+      <pubDate>Sat, 25 Oct 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://jshingler.github.io/tags/java/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Software Design</title>
+      <link>https://jshingler.github.io/tags/software-design/</link>
+      <pubDate>Sat, 25 Oct 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://jshingler.github.io/tags/software-design/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Spring Boot</title>
+      <link>https://jshingler.github.io/tags/spring-boot/</link>
+      <pubDate>Sat, 25 Oct 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://jshingler.github.io/tags/spring-boot/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Cloud</title>
       <link>https://jshingler.github.io/tags/cloud/</link>
