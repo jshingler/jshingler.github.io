@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>PKM on Jim Shingler Blog</title>
+    <title>PKM on Jim Shingler</title>
     <link>https://jshingler.github.io/tags/pkm/</link>
-    <description>Recent content in PKM on Jim Shingler Blog</description>
+    <description>Recent content in PKM on Jim Shingler</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 30 Oct 2021 20:11:37 -0400</lastBuildDate><atom:link href="https://jshingler.github.io/tags/pkm/index.xml" rel="self" type="application/rss+xml" />
